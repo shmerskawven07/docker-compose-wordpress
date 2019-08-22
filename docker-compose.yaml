@@ -1,0 +1,41 @@
+version: '3.7'
+volumes:
+  wp_data: 
+networks:
+  wp-back:
+  
+services:
+  db:
+    image: mysql:5.7
+    container_name: wordpress-db
+    volumes:
+      - ./wp_data:/var/lib/mysql
+    environment:
+       MYSQL_ROOT_PASSWORD: rootPassword
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+    ports:
+      - 8889:3306
+    networks:
+      - wp-back
+      
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    container_name: wordpress-site
+    ports:
+      - 8000:80
+      - 443:443
+    environment:
+       WORDPRESS_DB_HOST: db
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+    volumes:
+      - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+      - /Users/amineo/git/wp_files:/var/www/html
+    networks:
+      - wp-back
+
+
