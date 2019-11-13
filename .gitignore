@@ -24,3 +24,9 @@ node_modules/
 *.sql
 *.sqlite
 
+/wp_files_backup/
+/wp_data/
+/.project
+/.DS_Store
+/mysql_data/
+/logs/

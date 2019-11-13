@@ -9,7 +9,7 @@ services:
     image: mysql:5.7
     container_name: wordpress-db
     volumes:
-      - ./wp_data:/var/lib/mysql
+      - ./mysql_data:/var/lib/mysql
     environment:
        MYSQL_ROOT_PASSWORD: rootPassword
        MYSQL_DATABASE: wordpress
@@ -26,16 +26,38 @@ services:
     image: wordpress:latest
     container_name: wordpress-site
     ports:
-      - 8000:80
-      - 443:443
+      - '80:80'
+      - '443:443'
+      - 9000:9000
     environment:
        WORDPRESS_DB_HOST: db
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
-      - /Users/amineo/git/wp_files:/var/www/html
+      - ./wordpress_files:/var/www/html
     networks:
       - wp-back
 
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./logs/nginx:/var/log/nginx
+      - ./wordpress_files:/var/www/html
+      - ./certs:/etc/letsencrypt
+      - ./certs-data:/data/letsencrypt
+    environment:
+       VIRTUAL_HOST: prowebx.fr,www.prowebx.fr
+       LETSENCRYPT_HOST: prowebx.fr,www.prowebx.fr
+       LETSENCRYPT_EMAIL: EMAIL
+       SSL_POLICY: Mozilla-Modern
+       LETSENCRYPT_TEST: 'true'
+    depends_on:
+      - wordpress
+    restart: always
 
