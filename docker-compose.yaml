@@ -1,8 +1,7 @@
 version: '3.7'
 volumes:
   wp_data: 
-networks:
-  wp-back:
+
   
 services:
   db:
@@ -18,17 +17,14 @@ services:
     ports:
       - 8889:3306
     networks:
-      - wp-back
+            wp-back:
+                ipv4_address: 172.28.1.1
       
   wordpress:
     depends_on:
       - db
     image: wordpress:latest
     container_name: wordpress-site
-    ports:
-      - '80:80'
-      - '443:443'
-      - 9000:9000
     environment:
        WORDPRESS_DB_HOST: db
        WORDPRESS_DB_USER: wordpress
@@ -37,7 +33,8 @@ services:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
       - ./wordpress_files:/var/www/html
     networks:
-      - wp-back
+            wp-back:
+                ipv4_address: 172.28.1.3
 
   nginx:
     image: nginx:latest
@@ -52,12 +49,20 @@ services:
       - ./certs:/etc/letsencrypt
       - ./certs-data:/data/letsencrypt
     environment:
-       VIRTUAL_HOST: prowebx.fr,www.prowebx.fr
-       LETSENCRYPT_HOST: prowebx.fr,www.prowebx.fr
+       VIRTUAL_HOST: dev.prowebx.fr
+       LETSENCRYPT_HOST: dev.prowebx.fr
        LETSENCRYPT_EMAIL: EMAIL
        SSL_POLICY: Mozilla-Modern
        LETSENCRYPT_TEST: 'true'
-    depends_on:
-      - wordpress
+    networks:
+            wp-back:
+                ipv4_address: 172.28.1.2
     restart: always
 
+
+networks:
+   wp-back:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.28.0.0/16
