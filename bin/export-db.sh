@@ -9,3 +9,11 @@ docker-compose exec wordpress-db sh -c "$cmd" > $file
  
 # Remove password warning from the file
 sed -i '.bak' 1,1d $file && rm "$file.bak"
+
+
+
+
+#docker exec CONTAINER /usr/bin/mysqldump -u root --password=root DATABASE > backup.sql
+
+#cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
+
