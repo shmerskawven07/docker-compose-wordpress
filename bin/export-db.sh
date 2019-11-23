@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
 this_dir=$(cd `dirname $0` && pwd)
-file="$this_dir/../data/dump.sql"
- 
+file="$this_dir/dump.sql"
+
 # Create dump file
-cmd='exec mysqldump "$MYSQL_DATABASE" -uroot -p"$MYSQL_ROOT_PASSWORD"'
+cmd='exec mysqldump wordpress -uroot -prootPassword'
 docker-compose exec wordpress-db sh -c "$cmd" > $file
- 
+
 # Remove password warning from the file
 sed -i '.bak' 1,1d $file && rm "$file.bak"
-
 
 
 
