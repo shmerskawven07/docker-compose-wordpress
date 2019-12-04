@@ -31,3 +31,5 @@ node_modules/
 /logs/
 /mysql_data copie/
 /wordpress_files_bk/
+/mysql_data_testdump/
+/mysql_data/
