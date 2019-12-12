@@ -40,8 +40,8 @@ services:
             - ./logs/nginx_webserver:/var/log/nginx
             - ./nginx/wordpress.webserver.conf:/etc/nginx/conf.d/default.conf
         environment:
-            VIRTUAL_HOST: prowebx.fr,dev.prowebx.fr
-            LETSENCRYPT_HOST: prowebx.fr,dev.prowebx.fr
+            VIRTUAL_HOST: prowebx.fr, www.prowebx.fr
+            LETSENCRYPT_HOST: prowebx.fr, www.prowebx.fr
             LETSENCRYPT_EMAIL: shmerskawven@gmail.com
             SSL_POLICY: Mozilla-Modern
             LETSENCRYPT_TEST: 'true'
@@ -61,7 +61,7 @@ services:
         networks:
             default:
                 aliases:
-                    - dev.prowebx.fr
+                    - prowebx.fr
 
   dockergen:
         image: jwilder/docker-gen
