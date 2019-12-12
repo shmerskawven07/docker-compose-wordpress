@@ -54,7 +54,6 @@ services:
             - "443:443"
         volumes:
             - volume-reverse-proxy:/etc/nginx/conf.d
-            - ./redirect.conf:/etc/nginx/vhost.d/prowebx.fr_location
             - ./certs:/etc/nginx/certs
             - volume-reverse-proxy-html:/usr/share/nginx/html
             - volume-reverse-proxy-vhost:/etc/nginx/vhost.d
@@ -74,8 +73,6 @@ services:
             - /var/run/docker.sock:/tmp/docker.sock:ro
             - volume-reverse-proxy:/etc/nginx/conf.d
             - ./nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl
-            - ./redirect.conf:/etc/nginx/vhost.d/prowebx.fr_location
-            - ./redirect.conf:/etc/nginx/vhost.d/www.prowebx.fr_location
             - ./default.vhost.conf:/etc/nginx/vhost.d/default
             - ./certs:/etc/nginx/certs
             - ./htpasswd:/etc/nginx/htpasswd
@@ -90,8 +87,6 @@ services:
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:ro
             - ./certs:/etc/nginx/certs:rw
-            - ./redirect.conf:/etc/nginx/vhost.d/prowebx.fr_location
-            - ./redirect.conf:/etc/nginx/vhost.d/www.prowebx.fr_location
             - volume-reverse-proxy:/etc/nginx/conf.d
             - volume-reverse-proxy-html:/usr/share/nginx/html
             - volume-reverse-proxy-vhost:/etc/nginx/vhost.d
