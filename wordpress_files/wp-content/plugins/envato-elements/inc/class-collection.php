@@ -93,7 +93,7 @@ class Collection extends Base {
 			// We're in Elementor looking for an industry.
 			$filters['industry'] = sanitize_text_field( trim( $search['tag'] ) );
 		}
-		$per_page = 20;
+		$per_page = 36;
 
 		$is_filtered_data = false;
 		$is_tag_filtered  = false;
@@ -568,17 +568,9 @@ class Collection extends Base {
 
 
 	public function filter_template( $api_data, $category_data ) {
-		$thumbx2         = $thumb = ! empty( $api_data['preview_thumbs']['w200']['url'] ) ? $api_data['preview_thumbs']['w200']['url'] : $api_data['preview_thumb'];
-		$aspect          = '100%';
-		$animationHeight = 0;
-		if ( ! empty( $api_data['preview_thumbs']['w200']['width'] ) ) {
-			$animationHeight = $api_data['preview_thumbs']['w200']['height'];
-			$aspect          = ( ( intval( $api_data['preview_thumbs']['w200']['height'] ) / intval( $api_data['preview_thumbs']['w200']['width'] ) ) * 100 ) . '%';
-		}
+		$thumbx2 = $thumb = ! empty( $api_data['preview_thumbs']['w200']['url'] ) ? $api_data['preview_thumbs']['w200']['url'] : $api_data['preview_thumb'];
 		if ( ! empty( $api_data['preview_thumbs']['w500']['width'] ) ) {
-			$thumbx2         = ! empty( $api_data['preview_thumbs']['w500']['url'] ) ? $api_data['preview_thumbs']['w500']['url'] : $thumb;
-			$animationHeight = $api_data['preview_thumbs']['w500']['height'];
-			$aspect          = ( ( intval( $api_data['preview_thumbs']['w500']['height'] ) / intval( $api_data['preview_thumbs']['w500']['width'] ) ) * 100 ) . '%';
+			$thumbx2 = ! empty( $api_data['preview_thumbs']['w500']['url'] ) ? $api_data['preview_thumbs']['w500']['url'] : $thumb;
 		}
 
 		$large_thumb = [
@@ -594,42 +586,18 @@ class Collection extends Base {
 			];
 		}
 
+		$plugins = array_merge( ! empty( $category_data['plugins'] ) ? $category_data['plugins'] : [], ! empty( $api_data['plugins'] ) ? $api_data['plugins'] : [] );
+
 		$filtered_data = [
-			'templateId'             => $api_data['template_id'],
-			'previewThumb'           => $thumbx2 ? $thumbx2 : $thumb,
-			'previewUrl'             => ! empty( $api_data['preview_url'] ) ? $api_data['preview_url'] : $thumb,
-			'previewThumbAspect'     => $aspect,
-			'previewThumbHeight'     => $animationHeight,
-			'templateName'           => $api_data['name'],
-			// detail view data:
-			'templateInstalled'      => false, // todo
-			// if already installed.
-			'templateInstalledURL'   => '#',
-			// url to edit template,
-			'templateInstalledText'  => 'Edit Template',
-			'templateImportText'     => 'Import Template', // Changes to 'Import Pro Template'
-			// customize based on template type.
-			'largeThumb'             => $large_thumb,
+			'templateId'       => $api_data['template_id'],
+			'previewThumb'     => $thumbx2 ? $thumbx2 : $thumb,
+			'templateName'     => $api_data['name'],
+			'largeThumb'       => $large_thumb,
 			// which pages the template is inserted (or pending insert) on
-			'templateInserted'       => [],
-			'templateError'          => false,
-			'templateMissingPlugins' => [],
-			'templateFeatures'       => ! empty( $api_data['template_features'] ) ? $api_data['template_features'] : [],
-			'templateType'           => ! empty( $api_data['type'] ) ? $api_data['type'] : [],
+			'plugins'          => $plugins,
+			'templateFeatures' => ! empty( $api_data['template_features'] ) ? $api_data['template_features'] : [],
+			'templateType'     => ! empty( $api_data['type'] ) ? $api_data['type'] : [],
 		];
-
-		if ( isset( $filtered_data['templateFeatures']['elementor-pro'] ) ) {
-			$filtered_data['templateImportText']    = 'Import Pro Template';
-			$filtered_data['templateInstalledText'] = 'Edit Pro Template';
-		}
-
-		if ( ! defined( 'ENVATO_ELEMENTS_LOADING_FIX' ) ) {
-			$missing_plugins = Required_Plugin::get_instance()->get_missing_plugins( ! empty( $api_data['plugins'] ) ? $api_data['plugins'] : [], $this->category );
-			if ( $missing_plugins ) {
-				$filtered_data['templateError']          = true;
-				$filtered_data['templateMissingPlugins'] = $missing_plugins;
-			}
-		}
 
 		return $filtered_data;
 	}
@@ -646,6 +614,7 @@ class Collection extends Base {
 			'search_template_count' => ! empty( $api_data['search_template_count'] ) ? $api_data['search_template_count'] : false,
 			'features'              => [],
 			'filter'                => [],
+			'plugins'               => Required_Plugin::get_instance()->get_missing_plugins( [], $this->category ),
 		];
 
 		if ( ! empty( $api_data['options'] ) && ! empty( $api_data['options']['features'] ) && is_array( $api_data['options']['features'] ) ) {
@@ -663,10 +632,27 @@ class Collection extends Base {
 
 			if ( $filtered_templates ) {
 				$filtered_data['templates'] = $filtered_templates;
-				unset( $filtered_templates );
-				if ( ! defined( 'ENVATO_ELEMENTS_LOADING_FIX' ) ) {
-					$filtered_data = $this->filter_installed_status( $filtered_data, $search );
+
+				// Remove Pro based on search terms.
+				if ( $this->category === 'elementor' && $filtered_data['templates'] ) {
+					if ( ! empty( $search['premium'] ) && $search['premium'] === 'hide' ) {
+						// User only wants to see free templates. Remove here.
+						if ( ! empty( $filtered_data['features'] ) && ! empty( $filtered_data['features']['premium'] ) ) {
+							$filtered_data['templates'] = [];
+						}
+					}
+					if ( $filtered_data['templates'] && ! empty( $search['elementor'] ) && $search['elementor'] === 'free' ) {
+						// User only wants to see free templates. Remove here.
+						foreach ( $filtered_data['templates'] as $id => $template ) {
+							if ( ! empty( $template['templateFeatures'] ) && isset( $template['templateFeatures']['elementor-pro'] ) ) {
+								unset( $filtered_data['templates'][ $id ] );
+							}
+						}
+						$filtered_data['templates'] = array_values( $filtered_data['templates'] );
+					}
 				}
+
+				unset( $filtered_templates );
 			}
 		}
 
@@ -675,34 +661,6 @@ class Collection extends Base {
 
 	public function trashed_post( $post_id = false ) {
 
-	}
-
-	// Called when the rest API is returning details about this template.
-	public function filter_installed_status( $collection, $search = [] ) {
-
-		$imported_templates = CPT_Kits::get_instance()->get_imported_templates();
-		if ( ! empty( $collection['templates'] ) ) {
-			foreach ( $collection['templates'] as $id => $template ) {
-				foreach ( $imported_templates as $imported_template ) {
-					if ( $imported_template['categorySlug'] === $this->category && $imported_template['templateId'] === $template['templateId'] ) {
-
-						if ( ! empty( $imported_template['imported'] ) ) {
-							$collection['templates'][ $id ]['templateInstalled']    = true;
-							$collection['templates'][ $id ]['templateInstalledID']  = $imported_template['ID'];
-							$collection['templates'][ $id ]['templateInstalledURL'] = $this->edit_post_link( $imported_template['ID'] );
-							$collection['templates'][ $id ]['templateInstalleText'] = Category::get_instance()->get_current( $this->category )->edit_button;
-						}
-
-						// We also return the "Inserted Template" details so our template can choose to display this information.
-						if ( ! empty( $imported_template['inserted'] ) ) {
-							$collection['templates'][ $id ]['templateInserted'] = $imported_template['inserted'];
-						}
-					}
-				}
-			}
-		}
-
-		return $collection;
 	}
 
 	public function edit_post_link( $post_id ) {

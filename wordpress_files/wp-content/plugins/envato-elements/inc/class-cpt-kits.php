@@ -247,6 +247,8 @@ class CPT_Kits extends CPT {
 					'post_type'   => $this->cpt_slug,
 					'post_status' => 'draft,publish',
 					'numberposts' => - 1,
+					'orderby' => 'date',
+					'order' => 'DESC',
 				]
 			) as $post
 		) {

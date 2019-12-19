@@ -18,8 +18,9 @@
  * @package WordPress
  */
 
-define( 'WP_HOME', 'http://prowebx.fr' );
-define( 'WP_SITEURL', 'http://prowebx.fr' );
+define('WP_HOME','https://prowebx.fr' );
+define('WP_SITEURL','https://prowebx.fr' );
+define('FS_METHOD','direct');
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'wordpress');

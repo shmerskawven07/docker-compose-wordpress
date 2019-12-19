@@ -2,9 +2,9 @@
 Contributors: envato
 Tags: elementor, beaver builder, elements, templates
 Requires at least: 4.6
-Tested up to: 5.2
+Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 1.1.1
+Stable tag: 1.1.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -80,6 +80,21 @@ If you have any questions or feedback for the team, please send an email to exte
 
 
 == Changelog ==
+
+= 1.1.6 - 2019-12-18 =
+* Removed folder from plugin tag that was not needed
+
+= 1.1.5 - 2019-12-13 =
+* Compatibility fix for Elementor version 2.8
+
+= 1.1.4 - 2019-11-01 =
+* Pagination and general speed improvements
+
+= 1.1.3 - 2019-09-23 =
+* Increase items per page
+
+= 1.1.2 - 2019-09-02 =
+* Fix: Creating pages in Firefox fixed
 
 = 1.1.1 - 2019-07-08 =
 * Fix: Photo pagination bug

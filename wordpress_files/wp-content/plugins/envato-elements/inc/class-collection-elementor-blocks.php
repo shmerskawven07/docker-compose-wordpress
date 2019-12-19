@@ -54,8 +54,6 @@ class Collection_Elementor_Blocks extends Collection_Elementor {
 
 		$all_blocks = $this->get_all_blocks();
 
-		$imported_templates = CPT_Kits::get_instance()->get_imported_templates();
-
 		if ( $all_blocks && ! is_wp_error( $all_blocks ) && ! empty( $all_blocks['data'] ) ) {
 			$total_block_results = count( $all_blocks['data'] );
 			// First we extract any filters.
@@ -69,12 +67,12 @@ class Collection_Elementor_Blocks extends Collection_Elementor {
 			}
 
 			if ( $search_text ) {
-				API::get_instance()->api_call(
+				/*API::get_instance()->api_call(
 					'v1/statistics/feedback', [
 						'feedback' => $this->category . '_search_text',
 						'answer'   => $search_text,
 					]
-				);
+				);*/
 				foreach ( $blocks_to_filter as $block_id => $block ) {
 					$has_text_match = false;
 					if ( stripos( $block['name'], $search_text ) !== false ) {
@@ -137,8 +135,7 @@ class Collection_Elementor_Blocks extends Collection_Elementor {
 				foreach ( $grouped_blocks as $group_id => $block_grouping ) {
 					foreach ( $block_grouping['blocks'] as $block_id => $block ) {
 						$filtered_block = $this->filter_template( $block, [
-							'collectionId'    => $block['collection_id'],
-							'existingImports' => $imported_templates
+							'collectionId' => $block['collection_id'],
 						], $search );
 						if ( $filtered_block ) {
 							$grouped_blocks[ $group_id ]['blocks'][ $block_id ] = $filtered_block;
@@ -164,8 +161,7 @@ class Collection_Elementor_Blocks extends Collection_Elementor {
 				$response_count = count( $blocks_to_filter );
 				foreach ( $blocks_to_filter as $block_id => $block ) {
 					$filtered_block = $this->filter_template( $block, [
-						'collectionId'    => $block['collection_id'],
-						'existingImports' => $imported_templates
+						'collectionId' => $block['collection_id'],
 					], $search );
 					if ( $filtered_block ) {
 						$blocks_to_filter[ $block_id ] = $filtered_block;
@@ -212,7 +208,7 @@ class Collection_Elementor_Blocks extends Collection_Elementor {
 
 	public function filter_template( $block, $category_data, $search = [] ) {
 
-		if ( !empty( $search['elementor'] ) && $search['elementor'] === 'free' ) {
+		if ( ! empty( $search['elementor'] ) && $search['elementor'] === 'free' ) {
 			// User only wants to see free templates. Remove here.
 			if ( ! empty( $block['template_features'] ) && isset( $block['template_features']['elementor-pro'] ) ) {
 				return false;
@@ -220,44 +216,8 @@ class Collection_Elementor_Blocks extends Collection_Elementor {
 		}
 
 		$filtered_block                 = parent::filter_template( $block, $category_data );
-		$imported_templates             = $category_data['existingImports'];
 		$filtered_block['collectionId'] = $block['collection_id'];
 		$filtered_block['uuid']         = $block['collection_id'] . $block['template_id'];
-		foreach ( $imported_templates as $imported_template ) {
-			if ( $imported_template['categorySlug'] === $this->category && $imported_template['collectionId'] === $filtered_block['collectionId'] && $imported_template['templateId'] === $filtered_block['templateId'] ) {
-				if ( ! empty( $imported_template['imported'] ) ) {
-					// Todo: store global query of all library `_source_kit_id` items so we don't query on each one.
-					$cc_args               = [
-						'posts_per_page' => - 1,
-						'post_type'      => 'elementor_library',
-						'meta_key'       => '_source_kit_id',
-						'meta_value'     => $imported_template['ID'],
-					];
-					$has_elementor_library = false;
-					$cc_query              = new \WP_Query( $cc_args );
-					if ( $cc_query->have_posts() ) {
-						$posts = $cc_query->get_posts();
-						$post  = current( $posts );
-						if ( $post && $post->ID ) {
-							$imported_template['ID'] = $post->ID;
-							$has_elementor_library   = true;
-						}
-					}
-
-					if ( $has_elementor_library ) {
-						$filtered_block['itemImported']    = true;
-						$filtered_block['itemImportedUrl'] = $this->edit_post_link( $imported_template['ID'] );
-//											$filtered_block['templateInstalledID']  = $imported_template['ID'];
-//											$filtered_block['templateInstalleText'] = Category::get_instance()->get_current( $this->category )->edit_button;
-					}
-				}
-
-				// We also return the "Inserted Template" details so our template can choose to display this information.
-				if ( ! empty( $imported_template['inserted'] ) ) {
-					$filtered_block['templateInserted'] = $imported_template['inserted'];
-				}
-			}
-		}
 
 		return $filtered_block;
 	}

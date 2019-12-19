@@ -172,24 +172,6 @@ class Plugin extends Base {
 	public function admin_page_assets() {
 
 		wp_enqueue_style( 'envato-elements-admin', ENVATO_ELEMENTS_URI . 'assets/css/main.min.css', [], filemtime( ENVATO_ELEMENTS_DIR . 'assets/css/main.min.css' ) );
-		wp_register_script( 'envato-elements-admin', ENVATO_ELEMENTS_URI . 'assets/js/app.min.js', [], filemtime( ENVATO_ELEMENTS_DIR . 'assets/js/app.min.js' ) );
-		$collections_url = Collection::get_instance()->get_url();
-		$bits            = wp_parse_url( $collections_url );
-		wp_localize_script(
-			'envato-elements-admin', 'envato_elements_admin', [
-				'api_nonce'         => wp_create_nonce( 'wp_rest' ),
-//				'api_url'           => rest_url( ENVATO_ELEMENTS_SLUG . '/v1/' ),
-				// Swapping from unreliable REST API over to an admin-ajax endpoint.
-				'api_url'           => admin_url( 'admin-ajax.php?action=envato_elements&endpoint=' ),
-				'license_activated' => License::get_instance()->is_activated(),
-				'maintenance_mode'  => false, // We can prevent API calls if in maintenance mode.
-				'admin_base'        => trailingslashit( dirname( $bits['path'] ) ),
-				'admin_slug'        => $bits['query'],
-				'collections_base'  => $bits['path'] . '?' . $bits['query'],
-				'categories'        => Category::get_instance()->categories,
-			]
-		);
-		wp_enqueue_script( 'envato-elements-admin' );
 
 		wp_enqueue_style( 'envato-elements-google-font', 'https://fonts.googleapis.com/css?family=Rubik', 'envato-elements-admin' );
 
@@ -197,6 +179,9 @@ class Plugin extends Base {
 	}
 
 	public function admin_page_assets_react() {
+		static $loaded_assets = false;
+		if($loaded_assets)return;
+		$loaded_assets = true;
 
 		wp_enqueue_style( 'envato-elements-admin', ENVATO_ELEMENTS_URI . 'assets/react/admin.css', [], filemtime( ENVATO_ELEMENTS_DIR . 'assets/react/admin.css' ) );
 		wp_register_script( 'envato-elements-react', ENVATO_ELEMENTS_URI . 'assets/react/admin.js', [], filemtime( ENVATO_ELEMENTS_DIR . 'assets/react/admin.js' ) );

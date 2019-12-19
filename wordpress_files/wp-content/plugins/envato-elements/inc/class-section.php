@@ -140,7 +140,6 @@ class Section extends Base {
 					$has_viewed_section['about'] = true;
 					Options::get_instance()->set( 'view_section_statistics', $has_viewed_section );
 
-					Feedback::get_instance()->page_view( 'about' );
 					$this->content = $this->render_template( 'sections/about.php' );
 					$this->header  = $this->render_template( 'collections/header.php' );
 					echo $this->render_template( 'wrapper.php' );  // WPCS: XSS ok.

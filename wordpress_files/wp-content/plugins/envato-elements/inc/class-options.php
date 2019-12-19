@@ -161,6 +161,62 @@ class Options extends Base {
 
 	}
 
+	public function get_imported_templates( $limit ) {
+		$imported_templates = [];
+		foreach ( CPT_Kits::get_instance()->get_imported_templates() as $imported_template ) {
+			$imported_template_data = [
+				'templateId' => $imported_template['templateId'],
+			];
+			if ( ! empty( $imported_template['inserted'] ) ) {
+				// We've got some links we can show to the user about where their item has been inserted/imported.
+				$imported_template_data['links'] = [];
+				foreach ( $imported_template['inserted'] as $insert ) {
+					$imported_template_data['links'][] = [
+						'pageName' => $insert['pageName'],
+						'pageUrl'  => $insert['pageUrl'],
+					];
+				}
+			}
+			$imported_templates[ $imported_template['ID'] ] = $imported_template_data;
+			if ( $limit && count( $imported_templates ) > $limit ) {
+				break;
+			}
+		}
+
+		// Check if we've got an Elementor template library
+		if ( class_exists( '\Elementor\Plugin' ) ) {
+			$cc_args               = [
+				'posts_per_page' => - 1,
+				'post_type'      => 'elementor_library',
+			];
+			$has_elementor_library = false;
+			$cc_query              = new \WP_Query( $cc_args );
+			if ( $cc_query->have_posts() ) {
+				$posts = $cc_query->get_posts();
+				$post  = current( $posts );
+				if ( $post && $post->ID ) {
+					$source_kit_id = get_post_meta( $post->ID, '_source_kit_id', true );
+					if ( $source_kit_id && isset( $imported_templates[ $source_kit_id ] ) ) {
+						// We've found a template that was imported into the Elementor library from our plugin.
+						// Update our client side info with this extra data
+						$imported_templates[ $source_kit_id ]['itemImportedUrl'] = Linker::get_instance()->get_edit_link( $post->ID );
+					}
+				}
+			}
+		}
+
+		return array_values( $imported_templates );
+	}
+
+	public function get_installed_plugin_versions() {
+		return [
+			'envato-elements'  => Required_Plugin::get_instance()->get_plugin_version( 'envato-elements' ),
+			'elementor-pro'  => Required_Plugin::get_instance()->get_plugin_version( 'elementor-pro' ),
+			'elementor'  => Required_Plugin::get_instance()->get_plugin_version( 'elementor' ),
+			'beaver-builder'  => Required_Plugin::get_instance()->get_plugin_version( 'beaver-builder' ),
+		];
+	}
+
 	public function get_public_settings() {
 
 		$categories = Category::get_instance()->categories;
@@ -219,33 +275,10 @@ class Options extends Base {
 			'elements_token_url'    => Elements_API::get_instance()->get_token_url(),
 			'unseen_notifications'  => $unseen_notifications,
 			'current_notifications' => $current_notifications,
-			'token_exit_question'   => $this->get_remote_setting( 'token_exit_question' ),
 			'show_premium_notice'   => $this->get( 'show_premium_notice', 'yes' ),
-			//'has_elementor_pro'     => Elementor::get_instance()->has_elementor_pro(),
+			'imported_templates'    => $this->get_imported_templates( 30 ),
+			'installed_plugins'     => $this->get_installed_plugin_versions(),
 		];
-	}
-
-
-	public function get_remote_setting( $key ) {
-
-		$cache_key = 'envato_elements_remote_setting';
-		$settings  = get_transient( $cache_key );
-		if ( ! $settings ) {
-			$result = API::get_instance()->api_call(
-				'v2/settings/', []
-			);
-			if ( $result && ! is_wp_error( $result ) && ! empty( $result['settings'] ) && is_array( $result['settings'] ) ) {
-				$settings = $result['settings'];
-				// Fix setting the transient value so we don't look it up all the time.
-				set_transient( $cache_key, $settings, 86400 );
-			}
-		}
-
-		if ( isset( $settings[ $key ] ) ) {
-			return $settings[ $key ];
-		}
-
-		return null;
 	}
 
 }

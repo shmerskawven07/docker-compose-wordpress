@@ -116,7 +116,8 @@ class Elements_API extends Base {
 			return $response;
 		}
 
-		$data = json_decode( wp_remote_retrieve_body( $response ), true );
+		$raw_response = wp_remote_retrieve_body( $response );
+		$data         = json_decode( $raw_response, true );
 
 		$response_code = wp_remote_retrieve_response_code( $response );
 
@@ -125,16 +126,26 @@ class Elements_API extends Base {
 //		$response_code = 404;$data = [ 'error' => [ 'code'=>'item_not_found', 'message'=>'errormsg' ] ];
 //		$response_code = 503;$data = 'Unavailable';
 
-		if ( 200 !== (int) $response_code && 201 !== (int) $response_code ) {
-			// format our error response data into something easier to parse
-			return new \WP_Error( $response_code, $data && ! empty( $data['message'] ) ? $data['message'] : __( 'HTTP Error', 'envato-elements' ), $data && ! empty( $data['error'] ) ? $data['error'] : $data );
-		}
+		$error_message_to_display = 'Unknown error';
 
 		if ( empty( $data ) || ! is_array( $data ) ) {
-			return new \WP_Error( 'no_json', '', [
+			// Did the response contain HTML instead of json?
+			if ( strlen( $raw_response ) && ! $data ) {
+				// we failed to decode the response into JSON
+				$error_message_to_display = 'The API did not respond with valid JSON data.';
+			}
+
+			return new \WP_Error( 'no_json', $error_message_to_display, [
 				__( 'An error occurred, please try again', 'envato-elements' ),
 				var_export( wp_remote_retrieve_body( $response ), true )
 			] );
+		}
+
+		if ( 200 !== (int) $response_code && 201 !== (int) $response_code ) {
+			$error_message_to_display = $data && ! empty( $data['message'] ) ? $data['message'] : __( 'HTTP Error', 'envato-elements' );
+
+			// format our error response data into something easier to parse
+			return new \WP_Error( $response_code, $error_message_to_display, $data && ! empty( $data['error'] ) ? $data['error'] : $data );
 		}
 
 		return $data;

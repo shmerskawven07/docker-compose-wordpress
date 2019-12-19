@@ -99,7 +99,6 @@ class REST extends Base {
 		Collection_Photos::get_instance()->init_rest_endpoints( $namespace );
 		Import::get_instance()->init_rest_endpoints( $namespace );
 		Notifications::get_instance()->init_rest_endpoints( $namespace );
-		Feedback::get_instance()->init_rest_endpoints( $namespace );
 		Options::get_instance()->init_rest_endpoints( $namespace );
 
 	}

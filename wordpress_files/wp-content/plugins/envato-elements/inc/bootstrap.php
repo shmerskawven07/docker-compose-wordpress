@@ -43,7 +43,6 @@ if ( ! defined( 'ENVATO_ELEMENTS_TESTS' ) ) {
 	License::get_instance();
 	Elementor::get_instance();
 	REST::get_instance();
-	Feedback::get_instance();
 	Statistics::get_instance();
 	Section::get_instance();
 	Collection_Photos::get_instance();

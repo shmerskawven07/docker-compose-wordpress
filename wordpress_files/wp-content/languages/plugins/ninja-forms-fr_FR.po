@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Ninja Forms &#8211; The Easy and Powerful Forms Builder - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-09-17 07:48:02+0000\n"
+"PO-Revision-Date: 2019-11-21 16:31:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,62 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Ninja Forms &#8211; The Easy and Powerful Forms Builder - Stable (latest release)\n"
+
+#: includes/Config/ActionEmailSettings.php:191
+msgid "Add Attachment"
+msgstr "Ajouter une pièce jointe"
+
+#: includes/Templates/admin-menu-new-form.html.php:544
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: includes/Templates/admin-menu-new-form.html.php:545
+msgid "Confirm Reset"
+msgstr "Confirmer la réinitialisation"
+
+#: includes/Templates/admin-menu-new-form.html.php:843
+msgid "Image"
+msgstr "Image"
+
+#: includes/Config/MergeTagsWP.php:144
+msgid "User Username"
+msgstr "Identifiant utilisateur"
+
+#: includes/Config/MergeTagsForm.php:14
+msgid "Form ID"
+msgstr "ID de formulaire"
+
+#: includes/Config/FieldSettings.php:182
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: includes/Config/FieldSettings.php:183
+msgid "Vertical"
+msgstr "Vertical"
+
+#: includes/Config/FieldSettings.php:185
+msgid "List Orientation"
+msgstr "Alignement de liste"
+
+#: includes/Config/FieldSettings.php:195
+msgid "Number of Columns"
+msgstr "Nombre de colonnes"
+
+#: includes/Config/FieldSettings.php:210
+msgid "Allow Multiple Selections"
+msgstr "Autoriser les sélections multiples"
+
+#: includes/Config/FieldSettings.php:222
+msgid "Show Labels"
+msgstr "Afficher les libellés"
+
+#: includes/Config/FieldSettings.php:273
+msgid "Image Options"
+msgstr "Options d’image"
+
+#: includes/Fields/ListImage.php:32
+msgid "Select Image"
+msgstr "Sélectionnez une image"
 
 #: includes/Admin/Processes/ImportForm.php:258
 msgid "Failed to insert new form."
@@ -84,7 +140,8 @@ msgstr "« Mode Dev » de Ninja Forms "
 msgid "Form Builder \"Dev Mode\""
 msgstr "« Mode Dev » du constructeur de formulaires"
 
-#: includes/Templates/admin-menu-new-form.html.php:528
+#: includes/Templates/admin-menu-new-form.html.php:535
+#: includes/Templates/admin-menu-new-form.html.php:543
 msgid "Copy"
 msgstr "Copier"
 
@@ -205,7 +262,7 @@ msgstr "Afin d’éviter toute erreur, les valeurs ne peuvent contenir que des c
 msgid "The email address used in this field will be allowed to make data export and delete requests on behalf of their form submission."
 msgstr "L’adresse e-mail utilisée dans ce champ sera autorisée à faire des demandes d’export ou de suppression de données suite à l’envoi du formulaire."
 
-#: ninja-forms.php:1288
+#: ninja-forms.php:1251
 msgid "Once per week"
 msgstr "Une fois par semaine"
 
@@ -339,11 +396,11 @@ msgstr "Supprimer TOUTES les données de Ninja Forms et désinstaller ?"
 msgid "Designated Submitter's Email Address"
 msgstr "Adresse e-mail fournie par l’utilisateur"
 
-#: includes/Config/FieldSettings.php:660
+#: includes/Config/FieldSettings.php:752
 msgid "This Field Is Personally Identifiable Data"
 msgstr "Ce champ contient des données personnelles identifiantes"
 
-#: includes/Config/FieldSettings.php:663
+#: includes/Config/FieldSettings.php:755
 msgid "This option helps with privacy regulation compliance"
 msgstr "Cette option vous aide à respecter les lois sur la vie privée"
 
@@ -363,7 +420,7 @@ msgstr "Gestionnaire de modules (beta)"
 msgid "Sorry, you are not allowed to install plugins on this site."
 msgstr "Désolé, vous n’avez pas l’autorisation d’installer des extensions sur ce site."
 
-#: ninja-forms.php:619
+#: ninja-forms.php:582
 msgid "Ninja Forms allows you to collect personal information"
 msgstr "Ninja Forms vous permet de collecter des informations personelles"
 
@@ -459,7 +516,7 @@ msgstr "Restez formidable !"
 msgid "Thank you for opting in!"
 msgstr "Merci d’avoir accepté !"
 
-#: ninja-forms.php:620
+#: ninja-forms.php:583
 msgid "If you are using Ninja Forms to collect personal information, you should consult a legal professional for your use case."
 msgstr "Si vous utilisez Ninja Forms pour collecter des informations personnelles, vous devriez consulter un juriste pour étudier votre utilisation."
 
@@ -690,201 +747,201 @@ msgstr "Le formulaire n’existe pas."
 msgid "Insert Form"
 msgstr "Insérer le formulaire"
 
-#: includes/Config/FieldSettings.php:346
+#: includes/Config/FieldSettings.php:438
 msgid "This value will be used as the HTML input \"name\" attribute."
 msgstr "Cette valeur sera utilisée comme attribut HTML « name »."
 
-#: includes/Config/FieldSettings.php:342
+#: includes/Config/FieldSettings.php:434
 msgid "Custom Name Attribute"
 msgstr "Nom d’attribut personnalisé"
 
-#: includes/Config/i18nFrontEnd.php:69 includes/Config/i18nBuilder.php:54
+#: includes/Config/i18nFrontEnd.php:70 includes/Config/i18nBuilder.php:54
 #: includes/Config/i18nDashboard.php:42
 msgid "Saturday"
 msgstr "Samedi"
 
-#: includes/Config/i18nFrontEnd.php:68 includes/Config/i18nBuilder.php:53
+#: includes/Config/i18nFrontEnd.php:69 includes/Config/i18nBuilder.php:53
 #: includes/Config/i18nDashboard.php:41
 msgid "Friday"
 msgstr "Vendredi"
 
-#: includes/Config/i18nFrontEnd.php:67 includes/Config/i18nBuilder.php:52
+#: includes/Config/i18nFrontEnd.php:68 includes/Config/i18nBuilder.php:52
 #: includes/Config/i18nDashboard.php:40
 msgid "Thursday"
 msgstr "Jeudi"
 
-#: includes/Config/i18nFrontEnd.php:66 includes/Config/i18nBuilder.php:51
+#: includes/Config/i18nFrontEnd.php:67 includes/Config/i18nBuilder.php:51
 #: includes/Config/i18nDashboard.php:39
 msgid "Wednesday"
 msgstr "Mercredi"
 
-#: includes/Config/i18nFrontEnd.php:65 includes/Config/i18nBuilder.php:50
+#: includes/Config/i18nFrontEnd.php:66 includes/Config/i18nBuilder.php:50
 #: includes/Config/i18nDashboard.php:38
 msgid "Tuesday"
 msgstr "Mardi"
 
-#: includes/Config/i18nFrontEnd.php:64 includes/Config/i18nBuilder.php:49
+#: includes/Config/i18nFrontEnd.php:65 includes/Config/i18nBuilder.php:49
 #: includes/Config/i18nDashboard.php:37
 msgid "Monday"
 msgstr "Lundi"
 
-#: includes/Config/i18nFrontEnd.php:63 includes/Config/i18nBuilder.php:48
+#: includes/Config/i18nFrontEnd.php:64 includes/Config/i18nBuilder.php:48
 #: includes/Config/i18nDashboard.php:36
 msgid "Sunday"
 msgstr "Dimanche"
 
-#: includes/Config/i18nFrontEnd.php:46 includes/Config/i18nBuilder.php:31
+#: includes/Config/i18nFrontEnd.php:47 includes/Config/i18nBuilder.php:31
 #: includes/Config/i18nDashboard.php:19
 msgid "December"
 msgstr "Décembre"
 
-#: includes/Config/i18nFrontEnd.php:45 includes/Config/i18nBuilder.php:30
+#: includes/Config/i18nFrontEnd.php:46 includes/Config/i18nBuilder.php:30
 #: includes/Config/i18nDashboard.php:18
 msgid "November"
 msgstr "Novembre"
 
-#: includes/Config/i18nFrontEnd.php:44 includes/Config/i18nBuilder.php:29
+#: includes/Config/i18nFrontEnd.php:45 includes/Config/i18nBuilder.php:29
 #: includes/Config/i18nDashboard.php:17
 msgid "October"
 msgstr "Octobre"
 
-#: includes/Config/i18nFrontEnd.php:43 includes/Config/i18nBuilder.php:28
+#: includes/Config/i18nFrontEnd.php:44 includes/Config/i18nBuilder.php:28
 #: includes/Config/i18nDashboard.php:16
 msgid "September"
 msgstr "Septembre"
 
-#: includes/Config/i18nFrontEnd.php:42 includes/Config/i18nBuilder.php:27
+#: includes/Config/i18nFrontEnd.php:43 includes/Config/i18nBuilder.php:27
 #: includes/Config/i18nDashboard.php:15
 msgid "August"
 msgstr "Août"
 
-#: includes/Config/i18nFrontEnd.php:41 includes/Config/i18nBuilder.php:26
+#: includes/Config/i18nFrontEnd.php:42 includes/Config/i18nBuilder.php:26
 #: includes/Config/i18nDashboard.php:14
 msgid "July"
 msgstr "Juillet"
 
-#: includes/Config/i18nFrontEnd.php:40 includes/Config/i18nBuilder.php:25
+#: includes/Config/i18nFrontEnd.php:41 includes/Config/i18nBuilder.php:25
 #: includes/Config/i18nDashboard.php:13
 msgid "June"
 msgstr "Juin"
 
-#: includes/Config/i18nFrontEnd.php:39 includes/Config/i18nFrontEnd.php:53
+#: includes/Config/i18nFrontEnd.php:40 includes/Config/i18nFrontEnd.php:54
 #: includes/Config/i18nBuilder.php:24 includes/Config/i18nBuilder.php:38
 #: includes/Config/i18nDashboard.php:12 includes/Config/i18nDashboard.php:26
 msgid "May"
 msgstr "Mai"
 
-#: includes/Config/i18nFrontEnd.php:38 includes/Config/i18nBuilder.php:23
+#: includes/Config/i18nFrontEnd.php:39 includes/Config/i18nBuilder.php:23
 #: includes/Config/i18nDashboard.php:11
 msgid "April"
 msgstr "Avril"
 
-#: includes/Config/i18nFrontEnd.php:37 includes/Config/i18nBuilder.php:22
+#: includes/Config/i18nFrontEnd.php:38 includes/Config/i18nBuilder.php:22
 #: includes/Config/i18nDashboard.php:10
 msgid "March"
 msgstr "Mars"
 
-#: includes/Config/i18nFrontEnd.php:36 includes/Config/i18nBuilder.php:21
+#: includes/Config/i18nFrontEnd.php:37 includes/Config/i18nBuilder.php:21
 #: includes/Config/i18nDashboard.php:9
 msgid "February"
 msgstr "Février"
 
-#: includes/Config/i18nFrontEnd.php:35 includes/Config/i18nBuilder.php:20
+#: includes/Config/i18nFrontEnd.php:36 includes/Config/i18nBuilder.php:20
 #: includes/Config/i18nDashboard.php:8
 msgid "January"
 msgstr "Janvier"
 
-#: includes/Config/i18nFrontEnd.php:60 includes/Config/i18nBuilder.php:45
+#: includes/Config/i18nFrontEnd.php:61 includes/Config/i18nBuilder.php:45
 #: includes/Config/i18nDashboard.php:33
 msgid "Dec"
 msgstr "Déc"
 
-#: includes/Config/i18nFrontEnd.php:59 includes/Config/i18nBuilder.php:44
+#: includes/Config/i18nFrontEnd.php:60 includes/Config/i18nBuilder.php:44
 #: includes/Config/i18nDashboard.php:32
 msgid "Nov"
 msgstr "Nov"
 
-#: includes/Config/i18nFrontEnd.php:58 includes/Config/i18nBuilder.php:43
+#: includes/Config/i18nFrontEnd.php:59 includes/Config/i18nBuilder.php:43
 #: includes/Config/i18nDashboard.php:31
 msgid "Oct"
 msgstr "Oct"
 
-#: includes/Config/i18nFrontEnd.php:57 includes/Config/i18nBuilder.php:42
+#: includes/Config/i18nFrontEnd.php:58 includes/Config/i18nBuilder.php:42
 #: includes/Config/i18nDashboard.php:30
 msgid "Sep"
 msgstr "Sep"
 
-#: includes/Config/i18nFrontEnd.php:55 includes/Config/i18nBuilder.php:40
+#: includes/Config/i18nFrontEnd.php:56 includes/Config/i18nBuilder.php:40
 #: includes/Config/i18nDashboard.php:28
 msgid "Jul"
 msgstr "Juil"
 
-#: includes/Config/i18nFrontEnd.php:54 includes/Config/i18nBuilder.php:39
+#: includes/Config/i18nFrontEnd.php:55 includes/Config/i18nBuilder.php:39
 #: includes/Config/i18nDashboard.php:27
 msgid "Jun"
 msgstr "Juin"
 
-#: includes/Config/i18nFrontEnd.php:52 includes/Config/i18nBuilder.php:37
+#: includes/Config/i18nFrontEnd.php:53 includes/Config/i18nBuilder.php:37
 #: includes/Config/i18nDashboard.php:25
 msgid "Apr"
 msgstr "Avr"
 
-#: includes/Config/i18nFrontEnd.php:51 includes/Config/i18nBuilder.php:36
+#: includes/Config/i18nFrontEnd.php:52 includes/Config/i18nBuilder.php:36
 #: includes/Config/i18nDashboard.php:24
 msgid "Mar"
 msgstr "Mar"
 
-#: includes/Config/i18nFrontEnd.php:50 includes/Config/i18nBuilder.php:35
+#: includes/Config/i18nFrontEnd.php:51 includes/Config/i18nBuilder.php:35
 #: includes/Config/i18nDashboard.php:23
 msgid "Feb"
 msgstr "Fév"
 
-#: includes/Config/i18nFrontEnd.php:49 includes/Config/i18nBuilder.php:34
+#: includes/Config/i18nFrontEnd.php:50 includes/Config/i18nBuilder.php:34
 #: includes/Config/i18nDashboard.php:22
 msgid "Jan"
 msgstr "Jan"
 
-#: includes/Config/i18nFrontEnd.php:87 includes/Config/i18nBuilder.php:72
+#: includes/Config/i18nFrontEnd.php:88 includes/Config/i18nBuilder.php:72
 #: includes/Config/i18nDashboard.php:60
 msgid "Sa"
 msgstr "Sa"
 
-#: includes/Config/i18nFrontEnd.php:86 includes/Config/i18nBuilder.php:71
+#: includes/Config/i18nFrontEnd.php:87 includes/Config/i18nBuilder.php:71
 #: includes/Config/i18nDashboard.php:59
 msgid "Fr"
 msgstr "Ve"
 
-#: includes/Config/i18nFrontEnd.php:85 includes/Config/i18nBuilder.php:70
+#: includes/Config/i18nFrontEnd.php:86 includes/Config/i18nBuilder.php:70
 #: includes/Config/i18nDashboard.php:58
 msgid "Th"
 msgstr "Je"
 
-#: includes/Config/i18nFrontEnd.php:84 includes/Config/i18nBuilder.php:69
+#: includes/Config/i18nFrontEnd.php:85 includes/Config/i18nBuilder.php:69
 #: includes/Config/i18nDashboard.php:57
 msgid "We"
 msgstr "Me"
 
-#: includes/Config/i18nFrontEnd.php:83 includes/Config/i18nBuilder.php:68
+#: includes/Config/i18nFrontEnd.php:84 includes/Config/i18nBuilder.php:68
 #: includes/Config/i18nDashboard.php:56
 msgid "Tu"
 msgstr "Ma"
 
-#: includes/Config/i18nFrontEnd.php:82 includes/Config/i18nBuilder.php:67
+#: includes/Config/i18nFrontEnd.php:83 includes/Config/i18nBuilder.php:67
 #: includes/Config/i18nDashboard.php:55
 msgid "Mo"
 msgstr "Lu"
 
-#: includes/Config/i18nFrontEnd.php:81 includes/Config/i18nBuilder.php:66
+#: includes/Config/i18nFrontEnd.php:82 includes/Config/i18nBuilder.php:66
 #: includes/Config/i18nDashboard.php:54
 msgid "Su"
 msgstr "Di"
 
-#: includes/Config/i18nFrontEnd.php:33 includes/Config/i18nBuilder.php:18
+#: includes/Config/i18nFrontEnd.php:34 includes/Config/i18nBuilder.php:18
 #: includes/Config/i18nDashboard.php:6
 msgid "Next Month"
 msgstr "Mois suivant"
 
-#: includes/Config/i18nFrontEnd.php:32 includes/Config/i18nBuilder.php:17
+#: includes/Config/i18nFrontEnd.php:33 includes/Config/i18nBuilder.php:17
 #: includes/Config/i18nDashboard.php:5
 msgid "Previous Month"
 msgstr "Mois précédent"
@@ -893,37 +950,37 @@ msgstr "Mois précédent"
 msgid "Checked Value"
 msgstr "Valeur cochée"
 
-#: includes/Config/i18nFrontEnd.php:56 includes/Config/i18nBuilder.php:41
+#: includes/Config/i18nFrontEnd.php:57 includes/Config/i18nBuilder.php:41
 #: includes/Config/i18nDashboard.php:29
 msgid "Aug"
 msgstr "Aoû"
 
-#: includes/Config/i18nFrontEnd.php:77 includes/Config/i18nBuilder.php:62
+#: includes/Config/i18nFrontEnd.php:78 includes/Config/i18nBuilder.php:62
 #: includes/Config/i18nDashboard.php:50
 msgid "Fri"
 msgstr "Ven"
 
-#: includes/Config/i18nFrontEnd.php:76 includes/Config/i18nBuilder.php:61
+#: includes/Config/i18nFrontEnd.php:77 includes/Config/i18nBuilder.php:61
 #: includes/Config/i18nDashboard.php:49
 msgid "Thu"
 msgstr "Jeu"
 
-#: includes/Config/i18nFrontEnd.php:75 includes/Config/i18nBuilder.php:60
+#: includes/Config/i18nFrontEnd.php:76 includes/Config/i18nBuilder.php:60
 #: includes/Config/i18nDashboard.php:48
 msgid "Wed"
 msgstr "Mer"
 
-#: includes/Config/i18nFrontEnd.php:74 includes/Config/i18nBuilder.php:59
+#: includes/Config/i18nFrontEnd.php:75 includes/Config/i18nBuilder.php:59
 #: includes/Config/i18nDashboard.php:47
 msgid "Tue"
 msgstr "Mar"
 
-#: includes/Config/i18nFrontEnd.php:73 includes/Config/i18nBuilder.php:58
+#: includes/Config/i18nFrontEnd.php:74 includes/Config/i18nBuilder.php:58
 #: includes/Config/i18nDashboard.php:46
 msgid "Mon"
 msgstr "Lun"
 
-#: includes/Config/i18nFrontEnd.php:72 includes/Config/i18nBuilder.php:57
+#: includes/Config/i18nFrontEnd.php:73 includes/Config/i18nBuilder.php:57
 #: includes/Config/i18nDashboard.php:45
 msgid "Sun"
 msgstr "Dim"
@@ -932,7 +989,7 @@ msgstr "Dim"
 msgid "Unchecked Value"
 msgstr "Valeur non cochée"
 
-#: includes/Config/i18nFrontEnd.php:78 includes/Config/i18nBuilder.php:63
+#: includes/Config/i18nFrontEnd.php:79 includes/Config/i18nBuilder.php:63
 #: includes/Config/i18nDashboard.php:51
 msgid "Sat"
 msgstr "Sam"
@@ -945,7 +1002,7 @@ msgstr "Valeurs des cases à cocher"
 msgid "Disable UTF-8 Encoding"
 msgstr "Désactiver l’encodage UTF-8"
 
-#: includes/Config/MergeTagsForm.php:27
+#: includes/Config/MergeTagsForm.php:53
 msgid "Submission Count"
 msgstr "Nombre d’envois"
 
@@ -957,7 +1014,7 @@ msgstr "Les champs ne correspondent pas."
 msgid "Time"
 msgstr "Durée"
 
-#: includes/Config/MergeTagsWP.php:170
+#: includes/Config/MergeTagsWP.php:183
 msgid "User Meta"
 msgstr "Métadonnées utilisateur"
 
@@ -1139,11 +1196,11 @@ msgstr "Docs"
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
-#: includes/Templates/admin-menu-new-form.html.php:775
+#: includes/Templates/admin-menu-new-form.html.php:878
 msgid "Decimals"
 msgstr "Décimales"
 
-#: includes/Config/MergeTagsWP.php:157
+#: includes/Config/MergeTagsWP.php:170
 msgid "User URL"
 msgstr "URL de l’utilisateur"
 
@@ -1164,12 +1221,12 @@ msgstr "Apps & intégrations"
 msgid "User Display Name"
 msgstr "Nom affiché de l’utilisateur"
 
-#: includes/Config/MergeTagsForm.php:41
+#: includes/Config/MergeTagsForm.php:67
 #: includes/Config/MergeTagsFieldsAJAX.php:8
 msgid "All Fields Table"
 msgstr "Tableau de tous les champs"
 
-#: includes/Config/MergeTagsForm.php:48
+#: includes/Config/MergeTagsForm.php:74
 #: includes/Config/MergeTagsFieldsAJAX.php:16
 msgid "Fields Table"
 msgstr "Tableau des champs"
@@ -1218,7 +1275,7 @@ msgstr "Enregistrer les entrées"
 msgid "Please be aware that there is an issue with Contact Form 7 that breaks reCAPTCHA in other plugins.%sIf you need to use reCAPTCHA on any of your Ninja Forms, you will need to disable Contact Form 7."
 msgstr "Sachez qu’il y a un problème avec Contact Form 7 qui casse reCAPTCHA sur les autres extensions. %sSi vous souhaitez l’utiliser sur vos formulaires Ninja Forms, désactivez Contact Form 7."
 
-#: includes/Config/FieldSettings.php:1001
+#: includes/Config/FieldSettings.php:1093
 msgid "Use Inline Quantity"
 msgstr "Utilisez une quantité en ligne"
 
@@ -1272,36 +1329,36 @@ msgstr "Une nouvelle version de %1$s est disponible. %2$sConsultez les détails 
 msgid "Really Delete This Form? This will remove all fields and submission data. Recovery is not possible."
 msgstr "Confirmez-vous la suppression du formulaire ? Cela supprimera tous les champs et les entrées. Leur récupération sera impossible."
 
-#: ninja-forms.php:1284
+#: ninja-forms.php:1247
 msgid "Once per month"
 msgstr "Une fois par mois"
 
 #: includes/Config/MergeTagsDeprecated.php:144
-#: includes/Config/MergeTagsWP.php:183
+#: includes/Config/MergeTagsWP.php:196
 msgid "Site Title"
 msgstr "Titre du site"
 
-#: includes/Config/FieldSettings.php:508
+#: includes/Config/FieldSettings.php:600
 msgid "End Year"
 msgstr "Année de fin"
 
-#: includes/Config/FieldSettings.php:502
+#: includes/Config/FieldSettings.php:594
 msgid "Start Year"
 msgstr "Année de début"
 
-#: includes/Config/FieldSettings.php:441
+#: includes/Config/FieldSettings.php:533
 msgid "DD.MM.YYYY"
 msgstr "JJ.MM.AAAA"
 
-#: includes/Config/FieldSettings.php:453
+#: includes/Config/FieldSettings.php:545
 msgid "MM.DD.YYYY"
 msgstr "MM.JJ.AAAA"
 
-#: includes/Config/FieldSettings.php:465
+#: includes/Config/FieldSettings.php:557
 msgid "YYYY.MM.DD"
 msgstr "AAAA.MM.JJ"
 
-#: includes/Config/FieldSettings.php:495
+#: includes/Config/FieldSettings.php:587
 msgid "Year Range"
 msgstr "Période d’années"
 
@@ -1335,7 +1392,7 @@ msgstr "A.m.j"
 msgid "Ninja Forms Codebase"
 msgstr "Base de code de Ninja Forms"
 
-#: includes/AJAX/Controllers/Submission.php:535
+#: includes/AJAX/Controllers/Submission.php:543
 #: includes/AJAX/REST/Controller.php:85
 msgid "The server encountered an error during processing."
 msgstr "Le serveur a rencontré une erreur pendant le traitement."
@@ -1436,7 +1493,7 @@ msgstr "Valeurs par défaut de l’extension"
 msgid "Please export any forms or submissions you do not want to be lost during this process."
 msgstr "Veuillez exporter tous les formulaires et toutes les entrées que vous ne souhaiteriez pas perdre pendant le processus."
 
-#: ninja-forms.php:1095
+#: ninja-forms.php:1058
 msgid "%1$s is <strong>deprecated</strong> since Ninja Forms version %2$s."
 msgstr "%1$s est <strong>obsolète</strong> depuis Ninja Forms version %2$s."
 
@@ -1452,7 +1509,7 @@ msgstr "Vous êtes éligible à la mise à niveau vers Ninja Forms v3 ! %sMettr
 msgid "Upgrade to the Ninja Forms THREE."
 msgstr "Passer à Ninja Forms v3."
 
-#: ninja-forms.php:1091
+#: ninja-forms.php:1054
 msgid "%1$s is <strong>deprecated</strong> since Ninja Forms version %2$s! Use %3$s instead."
 msgstr "%1$s est <strong>obsolète</strong> depuis Ninja Forms version %2$s ! Veuillez plutôt utiliser %3$s."
 
@@ -1545,7 +1602,7 @@ msgstr "Terminé"
 msgid "Not Yet"
 msgstr "Pas encore"
 
-#: includes/Templates/admin-menu-new-form.html.php:815
+#: includes/Templates/admin-menu-new-form.html.php:918
 msgid " Open in new window"
 msgstr " Ouvrir dans une nouvelle fenêtre"
 
@@ -1706,30 +1763,30 @@ msgstr "button-secondary nf-download-all"
 msgid "one_week_support"
 msgstr "one_week_support"
 
-#: includes/Config/FieldSettings.php:185 includes/Config/FieldSettings.php:1068
+#: includes/Config/FieldSettings.php:240 includes/Config/FieldSettings.php:1160
 #: includes/Database/MockData.php:127
 msgid "One"
 msgstr "Un"
 
-#: includes/Config/FieldSettings.php:186 includes/Config/FieldSettings.php:1069
+#: includes/Config/FieldSettings.php:241 includes/Config/FieldSettings.php:1161
 #: includes/Database/MockData.php:134
 msgid "Two"
 msgstr "Deux"
 
-#: includes/Config/FieldSettings.php:186
+#: includes/Config/FieldSettings.php:241
 msgid "two"
 msgstr "deux"
 
-#: includes/Config/FieldSettings.php:187 includes/Config/FieldSettings.php:1070
+#: includes/Config/FieldSettings.php:242 includes/Config/FieldSettings.php:1162
 #: includes/Database/MockData.php:141
 msgid "Three"
 msgstr "Trois"
 
-#: includes/Config/FieldSettings.php:187
+#: includes/Config/FieldSettings.php:242
 msgid "three"
 msgstr "trois"
 
-#: includes/Config/FieldSettings.php:457
+#: includes/Config/FieldSettings.php:549
 msgid "YYYY-MM-DD"
 msgstr "AAAA-MM-JJ"
 
@@ -1747,7 +1804,7 @@ msgid "These fields must match!"
 msgstr "Ces champs doivent correspondre !"
 
 #: includes/Config/FormDisplaySettings.php:254
-#: includes/Config/i18nFrontEnd.php:21
+#: includes/Config/i18nFrontEnd.php:22
 msgid "Honeypot Error"
 msgstr "Erreur Honeypot"
 
@@ -1988,31 +2045,31 @@ msgstr "Veuillez saisir une adresse de messagerie valide. Ex : jean.dupont@gmai
 msgid "Go get a life, script kiddies"
 msgstr "Vous avez pas mieux à faire, voyous ?"
 
-#: includes/Config/FieldSettings.php:185
+#: includes/Config/FieldSettings.php:240
 msgid "one"
 msgstr "un"
 
-#: includes/Config/FieldSettings.php:433
+#: includes/Config/FieldSettings.php:525
 msgid "DD/MM/YYYY"
 msgstr "JJ/MM/AAAA"
 
-#: includes/Config/FieldSettings.php:437
+#: includes/Config/FieldSettings.php:529
 msgid "DD-MM-YYYY"
 msgstr "JJ-MM-AAAA"
 
-#: includes/Config/FieldSettings.php:445
+#: includes/Config/FieldSettings.php:537
 msgid "MM/DD/YYYY"
 msgstr "MM/JJ/AAAA"
 
-#: includes/Config/FieldSettings.php:449
+#: includes/Config/FieldSettings.php:541
 msgid "MM-DD-YYYY"
 msgstr "MM-JJ-AAAA"
 
-#: includes/Config/FieldSettings.php:461
+#: includes/Config/FieldSettings.php:553
 msgid "YYYY/MM/DD"
 msgstr "AAAA/MM/JJ"
 
-#: includes/Config/FieldSettings.php:469
+#: includes/Config/FieldSettings.php:561
 msgid "Friday, November 18, 2019"
 msgstr "Vendredi 18 novembre 2019"
 
@@ -2029,7 +2086,7 @@ msgstr "m/j/A"
 msgid "Price:"
 msgstr "Prix :"
 
-#: includes/Config/i18nBuilder.php:10
+#: includes/Config/i18nFrontEnd.php:20 includes/Config/i18nBuilder.php:10
 msgid "If you are a human seeing this field, please leave it empty."
 msgstr "Si vous êtes un être humain et que vous voyez ce champ, veuillez le laisser vide."
 
@@ -2057,11 +2114,11 @@ msgstr "Insérer un média"
 msgid "Please correct errors before submitting this form."
 msgstr "Veuillez corriger les erreurs avant d’envoyer ce formulaire."
 
-#: includes/Config/i18nFrontEnd.php:22
+#: includes/Config/i18nFrontEnd.php:23
 msgid "File Upload in Progress."
 msgstr "Téléversement du fichier en cours."
 
-#: includes/Config/i18nFrontEnd.php:23
+#: includes/Config/i18nFrontEnd.php:24
 msgid "FILE UPLOAD"
 msgstr "TÉLÉVERSEMENT DE FICHIER"
 
@@ -2208,7 +2265,7 @@ msgstr "Formulaire introuvable."
 msgid "Field Not Found"
 msgstr "Champ introuvable"
 
-#: includes/Config/MergeTagsForm.php:14
+#: includes/Config/MergeTagsForm.php:40
 msgid "Sub Sequence"
 msgstr "Sous-séquence"
 
@@ -2217,17 +2274,17 @@ msgstr "Sous-séquence"
 msgid "Invalid form id"
 msgstr "ID de formulaire non valide"
 
-#: includes/Config/FieldSettings.php:877
+#: includes/Config/FieldSettings.php:969
 #: includes/Admin/Processes/ImportForm.php:829
 #: includes/Database/Models/Form.php:934 includes/Fields/Confirm.php:26
 msgid "Confirm"
 msgstr "Confirmer"
 
-#: includes/Config/FieldSettings.php:398
+#: includes/Config/FieldSettings.php:490
 msgid "Container"
 msgstr "Conteneur"
 
-#: includes/Config/FieldSettings.php:1171
+#: includes/Config/FieldSettings.php:1263
 msgid "Add New Terms"
 msgstr "Ajouter de nouveaux termes"
 
@@ -2275,7 +2332,7 @@ msgstr "Permission refusée"
 msgid "Available Terms"
 msgstr "Termes disponibles"
 
-#: includes/Config/FieldSettings.php:1153
+#: includes/Config/FieldSettings.php:1245
 msgid "Taxonomy"
 msgstr "Taxonomie"
 
@@ -2299,7 +2356,7 @@ msgstr "Ligne de texte"
 msgid "Single Checkbox"
 msgstr "Case à cocher"
 
-#: ninja-forms.php:964
+#: ninja-forms.php:927
 msgid "Notice: JavaScript is required for this content."
 msgstr "Remarque : JavaScript est requis pour ce contenu."
 
@@ -2735,11 +2792,6 @@ msgstr "Équation"
 msgid "Form Key"
 msgstr "Clé de formulaire"
 
-#: includes/Config/FieldTypeSections.php:13
-#: includes/Config/PluginSettingsGroups.php:22
-msgid "Saved Fields"
-msgstr "Champs enregistrés"
-
 #: includes/Config/FieldTypeSections.php:26
 msgid "Common Fields"
 msgstr "Champs communs"
@@ -2764,15 +2816,15 @@ msgstr "Champs divers"
 msgid "Variable Name"
 msgstr "Nom de la variable"
 
-#: includes/Config/FieldSettings.php:1137
+#: includes/Config/FieldSettings.php:1229
 msgid "A case sensitive answer to help prevent spam submissions of your form."
 msgstr "Une réponse sensible à la casse pour protéger votre formulaire du spam."
 
-#: includes/Config/FieldSettings.php:1185
+#: includes/Config/FieldSettings.php:1277
 msgid "This is a user's state."
 msgstr "Il s’agit de l’état de l’utilisateur."
 
-#: includes/Config/FieldSettings.php:1189
+#: includes/Config/FieldSettings.php:1281
 msgid "Used for marking a field for processing."
 msgstr "Utilisé pour marqué un champ comme en cours de traitement."
 
@@ -2800,92 +2852,92 @@ msgstr "Limite d’envoi"
 msgid "We have noticed that you do not have a submit button on your form. We can add one for you automatically."
 msgstr "Nous avons remarqué que votre formulaire ne comportait pas de bouton d’envoi. Nous pouvons en ajouter un automatiquement."
 
-#: includes/Config/FieldSettings.php:1110 includes/Database/MockData.php:898
+#: includes/Config/FieldSettings.php:1202 includes/Database/MockData.php:898
 #: includes/Database/MockData.php:974 includes/Fields/Product.php:32
 msgid "Product"
 msgstr "Produit"
 
-#: includes/Config/FieldSettings.php:1064
+#: includes/Config/FieldSettings.php:1156
 msgid "Cost Options"
 msgstr "Options de coût"
 
-#: includes/Config/FieldSettings.php:1093
+#: includes/Config/FieldSettings.php:1185
 msgid "Single Cost"
 msgstr "Coût unique"
 
-#: includes/Config/FieldSettings.php:1101
+#: includes/Config/FieldSettings.php:1193
 msgid "Cost Type"
 msgstr "Type de coût"
 
-#: includes/Config/FieldSettings.php:1017
+#: includes/Config/FieldSettings.php:1109
 msgid "Single Product (default)"
 msgstr "Produit unique (par défaut)"
 
-#: includes/Config/FieldSettings.php:1021
+#: includes/Config/FieldSettings.php:1113
 msgid "Multi Product - Dropdown"
 msgstr "Produits multiples - Liste déroulante"
 
-#: includes/Config/FieldSettings.php:1025
+#: includes/Config/FieldSettings.php:1117
 msgid "Multi Product - Choose Many"
 msgstr "Produits multiples - En sélectionner plusieurs"
 
-#: includes/Config/FieldSettings.php:1029
+#: includes/Config/FieldSettings.php:1121
 msgid "Multi Product - Choose One"
 msgstr "Produits multiples - En choisir un seul"
 
-#: includes/Config/FieldSettings.php:1033
+#: includes/Config/FieldSettings.php:1125
 msgid "User Entry"
 msgstr "Saisie utilisateur"
 
-#: includes/Config/FieldSettings.php:1048
+#: includes/Config/FieldSettings.php:1140
 msgid "Cost"
 msgstr "Coût"
 
-#: includes/Config/FieldSettings.php:1116
+#: includes/Config/FieldSettings.php:1208
 msgid "- Select a Product"
 msgstr "- Sélectionnez un produit"
 
-#: includes/Config/FieldSettings.php:1133
+#: includes/Config/FieldSettings.php:1225
 msgid "Answer"
 msgstr "Réponse"
 
-#: includes/Config/FieldSettings.php:1097
+#: includes/Config/FieldSettings.php:1189
 msgid "Cost Dropdown"
 msgstr "Liste déroulante de coûts"
 
-#: includes/Config/FieldSettings.php:958
+#: includes/Config/FieldSettings.php:1050
 msgid "This number will be used in calculations if the box is unchecked."
 msgstr "Ce nombre sera utilisé dans les calculs si la case est décochée."
 
-#: includes/Config/FieldSettings.php:1012
+#: includes/Config/FieldSettings.php:1104
 msgid "Product Type"
 msgstr "Type de produit"
 
-#: includes/Config/FieldSettings.php:649
+#: includes/Config/FieldSettings.php:741
 msgid "Sort as Numeric"
 msgstr "Trier en mode numérique"
 
-#: includes/Config/FieldSettings.php:763
+#: includes/Config/FieldSettings.php:855
 msgid "Number of seconds for the countdown"
 msgstr "Nombre de secondes du compte à rebours"
 
-#: includes/Config/FieldSettings.php:949
+#: includes/Config/FieldSettings.php:1041
 msgid "This number will be used in calculations if the box is checked."
 msgstr "Ce nombre sera utilisé dans les calculs si la case est cochée."
 
-#: includes/Config/FieldSettings.php:955
+#: includes/Config/FieldSettings.php:1047
 msgid "Unchecked Calculation Value"
 msgstr "Valeur de calcul (non coché)"
 
-#: includes/Config/FieldSettings.php:969
+#: includes/Config/FieldSettings.php:1061
 msgid "Display This Calculation Variable"
 msgstr "Afficher cette variable de calcul"
 
-#: includes/Config/FieldSettings.php:653
+#: includes/Config/FieldSettings.php:745
 msgid "This column in the submissions table will sort by number."
 msgstr "Cette colonne du tableau des entrées sera triée numériquement."
 
-#: includes/Config/FieldSettings.php:780
+#: includes/Config/FieldSettings.php:872
 msgid ""
 "Use this as a reistration password field. If this box is check, both\n"
 "                        password and re-password textboxes will be output"
@@ -2893,55 +2945,55 @@ msgstr ""
 "Utilisez ce champ pour définir un mot de passe lors d’une inscription. Si cette case est cochées,\n"
 "                        les champs de mot de passe et de vérification afficheront leur contenu"
 
-#: includes/Config/FieldSettings.php:895
+#: includes/Config/FieldSettings.php:987
 msgid "Allows rich text input."
 msgstr "Autorise la saisie de texte enrichi."
 
-#: includes/Config/FieldSettings.php:931
+#: includes/Config/FieldSettings.php:1023
 msgid "Processing Label"
 msgstr "Libellé du traitement en cours"
 
-#: includes/Config/FieldSettings.php:988
+#: includes/Config/FieldSettings.php:1080
 msgid "Price"
 msgstr "Prix"
 
-#: includes/Config/FieldSettings.php:946
+#: includes/Config/FieldSettings.php:1038
 msgid "Checked Calculation Value"
 msgstr "Valeur de calcul (si coché)"
 
-#: includes/Config/FieldSettings.php:975
+#: includes/Config/FieldSettings.php:1067
 msgid "- Select a Variable"
 msgstr "- Sélectionnez une variable"
 
-#: includes/Config/FieldSettings.php:1005
+#: includes/Config/FieldSettings.php:1097
 msgid "Allows users to choose more than one of this product."
 msgstr "Permet aux utilisateurs de choisir plus d’un produit."
 
-#: includes/Config/FieldSettings.php:535
+#: includes/Config/FieldSettings.php:627
 msgid "Field Key"
 msgstr "Clé du champ"
 
-#: includes/Config/FieldSettings.php:306
+#: includes/Config/FieldSettings.php:398
 msgid "Word(s)"
 msgstr "Mot(s)"
 
-#: includes/Config/FieldSettings.php:302
+#: includes/Config/FieldSettings.php:394
 msgid "Character(s)"
 msgstr "Caractère(s)"
 
-#: includes/Config/FieldSettings.php:590
+#: includes/Config/FieldSettings.php:682
 msgid "Description"
 msgstr "Description"
 
-#: includes/Config/FieldSettings.php:237
+#: includes/Config/FieldSettings.php:329
 msgid "US Phone"
 msgstr "Tél. USA"
 
-#: includes/Config/FieldSettings.php:262
+#: includes/Config/FieldSettings.php:354
 msgid "Custom Mask"
 msgstr "Masque personnalisé"
 
-#: includes/Config/FieldSettings.php:271
+#: includes/Config/FieldSettings.php:363
 msgid ""
 "<ul>\n"
 "                            <li>a - Represents an alpha character (A-Z,a-z) - Only allows letters to be entered. </li>\n"
@@ -2958,23 +3010,23 @@ msgstr ""
 "                            les chiffres.</li>\n"
 "                        </ul>"
 
-#: includes/Config/FieldSettings.php:286
+#: includes/Config/FieldSettings.php:378
 msgid "Limit Input to this Number"
 msgstr "Limiter la saisie à cette valeur"
 
-#: includes/Config/FieldSettings.php:316
+#: includes/Config/FieldSettings.php:408
 msgid "Text to Appear After Counter"
 msgstr "Texte qui doit apparaître après le compteur"
 
-#: includes/Config/FieldSettings.php:317 includes/Config/FieldSettings.php:319
+#: includes/Config/FieldSettings.php:409 includes/Config/FieldSettings.php:411
 msgid "Character(s) left"
 msgstr "Caractère(s) restant(s)"
 
-#: includes/Config/FieldSettings.php:361
+#: includes/Config/FieldSettings.php:453
 msgid "Enter text you would like displayed in the field before a user enters any data."
 msgstr "Saisissez le texte qui sera affiché dans le champ avant que l’utilisateur ne saisisse quoi que ce soit."
 
-#: includes/Config/FieldSettings.php:390
+#: includes/Config/FieldSettings.php:482
 #: includes/Config/FormDisplaySettings.php:139
 msgid "Custom Class Names"
 msgstr "Noms de classse personnalisées"
@@ -2983,52 +3035,52 @@ msgstr "Noms de classse personnalisées"
 msgid "Wrapper"
 msgstr "Wrapper"
 
-#: includes/Config/FieldSettings.php:402
+#: includes/Config/FieldSettings.php:494
 msgid "Adds an extra class to your field wrapper."
 msgstr "Ajoute une classe supplémentaire à votre wrapper de champ."
 
-#: includes/Config/FieldSettings.php:407
+#: includes/Config/FieldSettings.php:499
 #: includes/Config/FormDisplaySettings.php:155
 msgid "Element"
 msgstr "Élément"
 
-#: includes/Config/FieldSettings.php:412
+#: includes/Config/FieldSettings.php:504
 msgid "Adds an extra class to your field element."
 msgstr "Ajoute une classe supplémentaire à votre élément de champ."
 
-#: includes/Config/FieldSettings.php:483
+#: includes/Config/FieldSettings.php:575
 msgid "Default To Current Date"
 msgstr "Par défaut, la date d’aujourd’hui"
 
-#: includes/Config/FieldSettings.php:521
+#: includes/Config/FieldSettings.php:613
 msgid "Number of seconds for timed submit."
 msgstr "Nombre de secondes pour les envois temporisés."
 
-#: includes/Config/FieldSettings.php:539
+#: includes/Config/FieldSettings.php:631
 msgid "Creates a unique key to identify and target your field for custom development."
 msgstr "Crée une clé unique pour identifier et cibler votre champ (pour du développement personnalisé)."
 
-#: includes/Config/FieldSettings.php:553
+#: includes/Config/FieldSettings.php:645
 msgid "Label used when viewing and exporting submissions."
 msgstr "Libellé utilisé pour l’affichage et l’export des entrées."
 
-#: includes/Config/FieldSettings.php:565
+#: includes/Config/FieldSettings.php:657
 msgid "Shown to users as a hover."
 msgstr "S’affiche au survol pour les utilisateurs."
 
-#: includes/Config/FieldSettings.php:200
+#: includes/Config/FieldSettings.php:255 includes/Config/FieldSettings.php:292
 msgid "Calc Value"
 msgstr "Valeur de calcul"
 
-#: includes/Config/FieldSettings.php:230
+#: includes/Config/FieldSettings.php:322
 msgid "Restricts the kind of input your users can put into this field."
 msgstr "Restreint le type de valeur que les utilisateurs peuvent saisir dans ce champ."
 
-#: includes/Config/FieldSettings.php:233
+#: includes/Config/FieldSettings.php:325
 msgid "none"
 msgstr "aucun"
 
-#: includes/Config/FieldSettings.php:180
+#: includes/Config/FieldSettings.php:235
 msgid "Options"
 msgstr "Options"
 
@@ -3076,7 +3128,7 @@ msgstr "Définissez un texte d’aide"
 msgid "Enter the label of the form field. This is how users will identify individual fields."
 msgstr "Saisissez le libellé de ce champ. C’est ainsi que les utilisateurs pourront les différencier."
 
-#: includes/Config/FieldSettings.php:58 includes/Config/FieldSettings.php:1037
+#: includes/Config/FieldSettings.php:58 includes/Config/FieldSettings.php:1129
 #: includes/Config/FormDisplaySettings.php:125
 #: includes/Database/MockData.php:376 includes/Database/MockData.php:633
 #: includes/Fields/Hidden.php:38
@@ -3153,7 +3205,7 @@ msgstr "Passez à Ninja Forms v3"
 msgid "Fields"
 msgstr "Champs"
 
-#: includes/AJAX/Controllers/Submission.php:556
+#: includes/AJAX/Controllers/Submission.php:564
 msgid "An unexpected error occurred."
 msgstr "Une erreur inattendue s’est produite."
 
@@ -3215,7 +3267,7 @@ msgid "Password"
 msgstr "Mot de passe"
 
 #: deprecated/includes/fields/list.php:175
-#: includes/Config/FieldSettings.php:180
+#: includes/Config/FieldSettings.php:235
 #: includes/Templates/admin-menu-new-form.html.php:494
 #: includes/Templates/admin-menu-new-form.html.php:509
 msgid "Import"
@@ -3230,7 +3282,7 @@ msgid "Selected"
 msgstr "Sélectionné"
 
 #. Plugin Name of the plugin
-#: ninja-forms.php:606 includes/Config/i18nFrontEnd.php:9
+#: ninja-forms.php:569 includes/Config/i18nFrontEnd.php:9
 #: includes/Config/i18nBuilder.php:5 includes/Admin/Menus/Forms.php:59
 msgid "Ninja Forms"
 msgstr "Ninja Forms"
@@ -3297,7 +3349,7 @@ msgid "List"
 msgstr "Liste"
 
 #: deprecated/includes/fields/textbox.php:176
-#: includes/Config/FieldSettings.php:245
+#: includes/Config/FieldSettings.php:337
 #: includes/Config/FormDisplaySettings.php:274
 #: includes/Config/PluginSettingsGeneral.php:41
 msgid "Currency"
@@ -3461,7 +3513,7 @@ msgid "This is the user's state"
 msgstr "Ceci est l’état de l’utilisateur"
 
 #: deprecated/includes/fields/list.php:145
-#: includes/Config/FieldSettings.php:676
+#: includes/Config/FieldSettings.php:768
 msgid "Multi-Select Box Size"
 msgstr "Taille de la sélection multiple"
 
@@ -3521,7 +3573,7 @@ msgid "Passwords do not match"
 msgstr "Les mots de passe ne sont pas identiques"
 
 #: deprecated/includes/fields/rating.php:13
-#: includes/Config/FieldSettings.php:796
+#: includes/Config/FieldSettings.php:888
 msgid "Number of stars"
 msgstr "Nombre d’étoiles"
 
@@ -3539,17 +3591,17 @@ msgid "Should be entered as a percentage. e.g. 8.25%, 4%"
 msgstr "Devrait être saisi comme un pourcentage. Par ex : 8.25% ou 4%"
 
 #: deprecated/includes/fields/textarea.php:18
-#: includes/Config/FieldSettings.php:891
+#: includes/Config/FieldSettings.php:983
 msgid "Show Rich Text Editor"
 msgstr "Afficher l’éditeur de texte avancé"
 
 #: deprecated/includes/fields/textarea.php:23
-#: includes/Config/FieldSettings.php:901
+#: includes/Config/FieldSettings.php:993
 msgid "Show Media Upload Button"
 msgstr "Afficher le bouton de téléversement de médias"
 
 #: deprecated/includes/fields/textarea.php:28
-#: includes/Config/FieldSettings.php:913
+#: includes/Config/FieldSettings.php:1005
 msgid "Disable Rich Text Editor on Mobile"
 msgstr "Désactiver l’éditeur de texte avancé sur mobile"
 
@@ -3558,7 +3610,7 @@ msgid "Validate as an email address? (Field must be required)"
 msgstr "Valider comme une adresse e-mail ? (Le champ doit être obligatoire)"
 
 #: deprecated/includes/fields/textbox.php:56
-#: includes/Config/FieldSettings.php:821
+#: includes/Config/FieldSettings.php:913
 msgid "Disable Input"
 msgstr "Désactiver la saisie"
 
@@ -3580,7 +3632,7 @@ msgstr "Texte du bouton d’envoi après l’expiration du compte à rebours"
 
 #: deprecated/includes/fields/timed-submit.php:18
 #: deprecated/includes/fields/timed-submit.php:69
-#: includes/Config/FieldSettings.php:750
+#: includes/Config/FieldSettings.php:842
 msgid "Please wait %n seconds"
 msgstr "Merci d’attendre %n secondes"
 
@@ -3613,7 +3665,7 @@ msgid "Cheatin&#8217; huh?"
 msgstr "Une fausse manipulation ?"
 
 #: deprecated/ninja-forms.php:674 includes/Config/FormDisplaySettings.php:260
-#: includes/Config/i18nFrontEnd.php:25
+#: includes/Config/i18nFrontEnd.php:26
 msgid "Fields marked with an %s*%s are required"
 msgstr "Les champs marqués d’un %s*%s sont obligatoires"
 
@@ -4926,12 +4978,12 @@ msgid "Kyrgyzstan"
 msgstr "Kirghizistan"
 
 #: deprecated/includes/fields/country.php:277
-#: includes/Config/FieldSettings.php:835
+#: includes/Config/FieldSettings.php:927
 msgid "Use a custom first option"
 msgstr "Utiliser une première option personnalisée"
 
 #: deprecated/includes/fields/country.php:283
-#: includes/Config/FieldSettings.php:848
+#: includes/Config/FieldSettings.php:940
 msgid "Custom first option"
 msgstr "Première option personnalisée"
 
@@ -5066,7 +5118,7 @@ msgstr "Île Christmas"
 #: deprecated/ninja-forms.php:683
 #: deprecated/includes/admin/upgrades/upgrade-handler-page.html.php:29
 #: deprecated/includes/admin/step-processing.php:11
-#: includes/Config/FieldSettings.php:934 lib/StepProcessing/menu.php:11
+#: includes/Config/FieldSettings.php:1026 lib/StepProcessing/menu.php:11
 msgid "Processing"
 msgstr "En cours de traitement"
 
@@ -5409,8 +5461,9 @@ msgstr "Aller aux formulaires"
 #: deprecated/includes/fields/list.php:98
 #: deprecated/includes/fields/list.php:193
 #: deprecated/includes/fields/list.php:585 includes/Config/FieldSettings.php:21
-#: includes/Config/FieldSettings.php:191 includes/Config/FieldSettings.php:732
-#: includes/Config/FieldSettings.php:748 includes/Config/FieldSettings.php:1074
+#: includes/Config/FieldSettings.php:246 includes/Config/FieldSettings.php:284
+#: includes/Config/FieldSettings.php:824 includes/Config/FieldSettings.php:840
+#: includes/Config/FieldSettings.php:1166
 msgid "Label"
 msgstr "Libellé"
 
@@ -5624,7 +5677,7 @@ msgstr "Si vos anciens formulaires ont disparu après la mise à jour à la vers
 
 #: deprecated/includes/admin/upgrades/convert-notifications.php:194
 #: includes/Config/MergeTagsDeprecated.php:131
-#: includes/Config/MergeTagsWP.php:144
+#: includes/Config/MergeTagsWP.php:157
 msgid "User Email"
 msgstr "E-mail de l’utilisateur"
 
@@ -5766,7 +5819,7 @@ msgstr "Les modifications apportées à l’interface dans cette version posent 
 
 #: deprecated/includes/display/processing/req-fields-pre-process.php:65
 #: includes/Config/FormDisplaySettings.php:248
-#: includes/Config/i18nFrontEnd.php:20
+#: includes/Config/i18nFrontEnd.php:21
 msgid "This is a required field."
 msgstr "Ce champ est obligatoire."
 
@@ -5990,7 +6043,7 @@ msgstr "Ceci est le nom interne de votre champ. Exemples : mon_calc, prix_total
 #: deprecated/includes/fields/number.php:83
 #: deprecated/includes/fields/hidden.php:53
 #: deprecated/includes/fields/textbox.php:122
-#: includes/Config/FieldSettings.php:129 includes/Config/FieldSettings.php:372
+#: includes/Config/FieldSettings.php:129 includes/Config/FieldSettings.php:464
 #: includes/Fields/ListCountry.php:30
 msgid "Default Value"
 msgstr "Valeur par défaut"
@@ -6001,7 +6054,7 @@ msgstr "Classe CSS personnalisée"
 
 #: deprecated/includes/admin/upgrades/convert-notifications.php:102
 #: includes/Config/MergeTagsDeprecated.php:170
-#: includes/Config/MergeTagsWP.php:209
+#: includes/Config/MergeTagsWP.php:222
 #: includes/Config/FormActionDefaults.php:16
 msgid "Admin Email"
 msgstr "E-mail à l’administrateur"
@@ -6035,7 +6088,7 @@ msgstr "Voici les caractères prédéfinis de masque"
 #: deprecated/classes/subs-cpt.php:1006
 #: deprecated/includes/admin/pages/ninja-forms/tabs/form-list/form-list.php:119
 #: includes/Admin/AllFormsTable.php:20
-#: includes/Admin/Menus/ImportExport.php:141 includes/MergeTags/Form.php:17
+#: includes/Admin/Menus/ImportExport.php:141 includes/MergeTags/Form.php:19
 msgid "Form"
 msgstr "Formulaire"
 
@@ -6051,7 +6104,7 @@ msgstr "Formulaires"
 #: deprecated/includes/admin/pages/ninja-forms/tabs/form-list/form-list.php:217
 #: deprecated/includes/admin/pages/ninja-forms/tabs/form-settings/form-settings.php:55
 #: includes/Config/FormDisplaySettings.php:12
-#: includes/Admin/AllFormsTable.php:74
+#: includes/Config/MergeTagsForm.php:27 includes/Admin/AllFormsTable.php:74
 msgid "Form Title"
 msgstr "Titre du Formulaire"
 
@@ -6086,7 +6139,7 @@ msgstr "Veuillez sélectionner un fichier valide de formulaire exporté."
 #: deprecated/includes/fields/textbox.php:135
 #: deprecated/includes/fields/textbox.php:177
 #: deprecated/includes/admin/edit-field/user-info-fields.php:30
-#: includes/Config/FieldSettings.php:249
+#: includes/Config/FieldSettings.php:341
 msgid "Custom"
 msgstr "Personnalisé"
 
@@ -6104,7 +6157,8 @@ msgstr "- Aucun"
 
 #: deprecated/classes/subs-cpt.php:902 deprecated/includes/fields/list.php:103
 #: deprecated/includes/fields/list.php:588
-#: includes/Config/FieldSettings.php:196 includes/Config/FieldSettings.php:1079
+#: includes/Config/FieldSettings.php:251 includes/Config/FieldSettings.php:288
+#: includes/Config/FieldSettings.php:1171
 #: includes/Templates/admin-metabox-sub-fields.html.php:8
 msgid "Value"
 msgstr "Valeur"
@@ -6156,7 +6210,7 @@ msgstr "Tout"
 #: deprecated/includes/admin/admin.php:30
 #: deprecated/includes/admin/welcome.php:335
 #: deprecated/includes/admin/pages/ninja-forms/tabs/form-settings/form-settings.php:7
-#: includes/Config/FieldSettings.php:868
+#: includes/Config/FieldSettings.php:960
 #: includes/Templates/admin-menu-settings.html.php:3
 #: includes/Templates/ui-nf-header.html.php:7
 #: includes/Templates/ui-nf-menu-drawer.html.php:8
@@ -6252,7 +6306,7 @@ msgstr "Environnement"
 
 #: deprecated/includes/admin/pages/system-status-html.php:21
 #: includes/Config/MergeTagsDeprecated.php:157
-#: includes/Config/MergeTagsWP.php:196
+#: includes/Config/MergeTagsWP.php:209
 #: includes/Admin/Menus/SystemStatus.php:175
 msgid "Site URL"
 msgstr "URL du site"
@@ -6459,7 +6513,7 @@ msgstr "Enregistrer"
 #: deprecated/includes/admin/pages/ninja-forms/tabs/form-list/form-list.php:119
 #: deprecated/includes/admin/pages/ninja-forms/tabs/form-list/form-list.php:144
 #: deprecated/includes/admin/edit-field/input-limit.php:40
-#: includes/Config/i18nFrontEnd.php:31
+#: includes/Config/i18nFrontEnd.php:32
 msgid "of"
 msgstr "sur"
 
@@ -6512,7 +6566,7 @@ msgid "Ninja Form Settings"
 msgstr "Réglages de Ninja Forms"
 
 #: deprecated/includes/admin/edit-field/autocomplete-off.php:16
-#: includes/Config/FieldSettings.php:809
+#: includes/Config/FieldSettings.php:901
 msgid "Disable Browser Autocomplete"
 msgstr "Désactiver l’autocomplétion du navigateur"
 
@@ -6591,7 +6645,7 @@ msgid "Calculation Settings"
 msgstr "Réglages de calcul"
 
 #: deprecated/includes/admin/edit-field/placeholder.php:19
-#: includes/Config/FieldSettings.php:357
+#: includes/Config/FieldSettings.php:449
 msgid "Placeholder"
 msgstr "Texte indicatif"
 
@@ -6628,7 +6682,7 @@ msgstr "Afficher le texte d’aide"
 #: deprecated/includes/fields/calc.php:283
 #: deprecated/includes/display/fields/help.php:26
 #: deprecated/includes/admin/edit-field/help.php:37
-#: includes/Config/FieldSettings.php:563
+#: includes/Config/FieldSettings.php:655
 msgid "Help Text"
 msgstr "Texte d’aide"
 
@@ -6641,7 +6695,7 @@ msgid "If this box is checked, this column in the submissions table will sort by
 msgstr "Si vous cochez cette case, cette colonne du tableau des entrées sera triée dans l’ordre numérique."
 
 #: deprecated/includes/admin/edit-field/sub-settings.php:68
-#: includes/Config/FieldSettings.php:549
+#: includes/Config/FieldSettings.php:641
 msgid "Admin Label"
 msgstr "Libellé administrateur"
 
@@ -6673,7 +6727,7 @@ msgstr "Vous n’avez pas mis de bouton d’envoi dans votre formulaire."
 
 #: deprecated/includes/fields/textbox.php:170
 #: deprecated/includes/admin/pages/ninja-forms/tabs/field-settings/help.php:7
-#: includes/Config/FieldSettings.php:227
+#: includes/Config/FieldSettings.php:319
 msgid "Input Mask"
 msgstr "Masque de saisie"
 
@@ -6715,6 +6769,8 @@ msgstr "Par exemple, si vous avez une clé de produit qui est sous le format A4B
 
 #: deprecated/includes/admin/pages/ninja-forms/tabs/field-settings/sidebars/fav-fields.php:6
 #: deprecated/includes/admin/pages/ninja-forms-impexp/tabs/impexp-fields/impexp-fields.php:7
+#: includes/Config/FieldTypeSections.php:13
+#: includes/Config/PluginSettingsGroups.php:22
 #: includes/Templates/admin-metabox-import-export-favorite-fields-export.html.php:9
 #: includes/Admin/Menus/ImportExport.php:142
 msgid "Favorite Fields"
@@ -7110,7 +7166,7 @@ msgid "WP Language"
 msgstr "Langue de WP"
 
 #: deprecated/includes/admin/pages/system-status-html.php:81
-#: includes/Config/FieldSettings.php:429
+#: includes/Config/FieldSettings.php:521
 #: includes/Admin/Menus/SystemStatus.php:67
 msgid "Default"
 msgstr "Par défaut"
@@ -7121,6 +7177,7 @@ msgstr "Par défaut"
 #: deprecated/includes/admin/pages/ninja-forms-settings/tabs/general-settings/general-settings.php:123
 #: includes/Config/i18nBuilder.php:76 includes/Config/i18nDashboard.php:68
 #: includes/Config/i18nDashboard.php:79
+#: includes/Templates/admin-menu-new-form.html.php:546
 #: includes/Templates/admin-menu-dashboard.html.php:164
 #: includes/Templates/ui-nf-header.html.php:12
 #: includes/Admin/Menus/ImportExport.php:170
@@ -7151,7 +7208,7 @@ msgstr "Exporter"
 
 #: deprecated/classes/subs-cpt.php:315
 #: deprecated/includes/fields/textbox.php:175
-#: includes/Config/FieldSettings.php:241
+#: includes/Config/FieldSettings.php:333
 #: includes/Config/MergeTagsDeprecated.php:183
 #: includes/Config/MergeTagsOther.php:25
 #: includes/Admin/Menus/Submissions.php:192
@@ -7175,7 +7232,7 @@ msgid "Name"
 msgstr "Nom"
 
 #: deprecated/classes/notification-email.php:130
-#: includes/Config/FieldSettings.php:424
+#: includes/Config/FieldSettings.php:516
 #: includes/Config/ActionEmailSettings.php:139
 msgid "Format"
 msgstr "Format"
@@ -7232,7 +7289,7 @@ msgstr "Dupliquer"
 
 #: deprecated/classes/notifications-table.php:176
 #: deprecated/classes/notifications.php:259
-#: includes/Config/FieldSettings.php:859 includes/Config/i18nDashboard.php:65
+#: includes/Config/FieldSettings.php:951 includes/Config/i18nDashboard.php:65
 #: includes/Templates/admin-menu-new-form.html.php:215
 msgid "Type"
 msgstr "Type"
@@ -7317,7 +7374,8 @@ msgstr "Supprimer définitivement"
 #: deprecated/includes/fields/list.php:149
 #: deprecated/includes/admin/admin.php:6
 #: deprecated/includes/admin/admin.php:101
-#: includes/Config/FieldSettings.php:180 includes/Config/FieldSettings.php:1064
+#: includes/Config/FieldSettings.php:235 includes/Config/FieldSettings.php:273
+#: includes/Config/FieldSettings.php:1156
 #: includes/Config/FormCalculationSettings.php:12
 #: includes/Config/ActionSaveSettings.php:41
 #: includes/Templates/admin-menu-dashboard.html.php:163

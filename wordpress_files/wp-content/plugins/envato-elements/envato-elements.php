@@ -4,7 +4,7 @@
  * Description: Beautifully designed, Free templates for popular WordPress page builders & access to Premium Photos from Envato Elements.
  * Author: Envato
  * Author URI: https://elements.envato.com/extensions/wordpress/?utm_source=extensions&utm_medium=referral&utm_campaign=elements_extensions_wpplugins
- * Version: 1.1.1
+ * Version: 1.1.6
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'ENVATO_ELEMENTS_SLUG', 'envato-elements' );
-define( 'ENVATO_ELEMENTS_VER', '1.1.1' );
+define( 'ENVATO_ELEMENTS_VER', '1.1.5' );
 define( 'ENVATO_ELEMENTS_FILE', __FILE__ );
 define( 'ENVATO_ELEMENTS_DIR', plugin_dir_path( ENVATO_ELEMENTS_FILE ) );
 define( 'ENVATO_ELEMENTS_URI', plugins_url( '/', ENVATO_ELEMENTS_FILE ) );

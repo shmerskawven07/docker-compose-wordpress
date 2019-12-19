@@ -74,10 +74,6 @@ class API extends Base {
 			$body_args['envato_elements_dev'] = true;
 		}
 
-		if ( defined( 'ENVATO_ELEMENTS_LOADING_FIX' ) ) {
-			$force = true;
-		}
-
 		$cache_key = 'envato_elements_' . md5( serialize( [ $this->api_endpoint, $endpoint, $body_args ] ) );
 		$data      = false;
 

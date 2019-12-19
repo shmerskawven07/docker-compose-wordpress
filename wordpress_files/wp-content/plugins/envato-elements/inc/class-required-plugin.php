@@ -28,31 +28,51 @@ class Required_Plugin extends Base {
 	private $_current_plugins = [];
 
 	public $category_plugins = [
-		'elementor'      => [
+		'elementor'        => [
 			'file'        => 'elementor/elementor.php',
 			'slug'        => 'elementor',
 			'min_version' => '2.5.15',
 			'name'        => 'Elementor',
 		],
-		'elementor-blocks'      => [
+		'elementor-blocks' => [
 			'file'        => 'elementor/elementor.php',
 			'slug'        => 'elementor',
 			'min_version' => '2.5.15',
 			'name'        => 'Elementor',
 		],
-		'elementor-pro'      => [
+		'elementor-pro'    => [
 			'file'        => 'elementor-pro/elementor-pro.php',
 			'slug'        => 'elementor-pro',
 			'min_version' => '2.5.3',
 			'name'        => 'Elementor Pro',
 		],
-		'beaver-builder' => [
+		'beaver-builder'   => [
 			'file'        => 'beaver-builder-lite-version/fl-builder.php',
 			'slug'        => 'beaver-builder-lite-version',
 			'min_version' => '2.1.1.3',
 			'name'        => 'Beaver Builder',
 		],
 	];
+
+	public function get_plugin_version( $plugin_slug ) {
+		if ( ( $plugin_slug === 'beaver-builder-lite-version' || $plugin_slug === 'beaver-builder' ) && defined( 'FL_BUILDER_VERSION' ) ) {
+			return FL_BUILDER_VERSION;
+		}
+
+		if ( $plugin_slug === 'envato-elements' ) {
+			return ENVATO_ELEMENTS_VER;
+		}
+
+		if ( $plugin_slug === 'elementor' && defined( 'ELEMENTOR_VERSION' ) ) {
+			return ELEMENTOR_VERSION;
+		}
+		if ( $plugin_slug === 'elementor-pro' && defined( 'ELEMENTOR_PRO_VERSION' ) ) {
+			return ELEMENTOR_PRO_VERSION;
+		}
+
+		return false;
+
+	}
 
 	public function get_plugin_status( $plugin_slug, $plugin_details ) {
 
@@ -67,9 +87,10 @@ class Required_Plugin extends Base {
 		if ( $plugin_slug === 'envato-elements' ) {
 			// Checking if we have to self-update to use this particular template.
 			// Don't rely on code below because our plugin could be installed in a non-standard directory.
-			if( version_compare( ENVATO_ELEMENTS_VER, $plugin_details['min_version'], '<' ) ) {
+			if ( version_compare( ENVATO_ELEMENTS_VER, $plugin_details['min_version'], '<' ) ) {
 				return 'update';
 			}
+
 			return 'activated';
 		}
 
