@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Non classé &#8211; ProWebx</title>
+	<atom:link href="https://prowebx.fr/category/non-classe/feed/" rel="self" type="application/rss+xml" />
+	<link>https://prowebx.fr</link>
+	<description></description>
+	<lastBuildDate>Mon, 11 Nov 2019 21:21:11 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.4</generator>
+
+<image>
+	<url>https://prowebx.fr/wp-content/uploads/2020/01/cropped-mini_logo_recadrer-32x32.png</url>
+	<title>Non classé &#8211; ProWebx</title>
+	<link>https://prowebx.fr</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>La création de site web avec wordpress</title>
+		<link>https://prowebx.fr/la-creation-de-site-web-avec-wordpress/</link>
+				<comments>https://prowebx.fr/la-creation-de-site-web-avec-wordpress/#respond</comments>
+				<pubDate>Mon, 11 Nov 2019 21:21:08 +0000</pubDate>
+		<dc:creator><![CDATA[Amine]]></dc:creator>
+				<category><![CDATA[Non classé]]></category>
+
+		<guid isPermaLink="false">https://prowebx.fr/?p=5309</guid>
+				<description><![CDATA[<p>bla bla bla</p>
+<p>L’article <a rel="nofollow" href="https://prowebx.fr/la-creation-de-site-web-avec-wordpress/">La création de site web avec wordpress</a> est apparu en premier sur <a rel="nofollow" href="https://prowebx.fr">ProWebx</a>.</p>
+]]></description>
+								<content:encoded><![CDATA[
+<p class="has-text-color has-background has-very-dark-gray-color has-very-light-gray-background-color">bla bla bla </p>
+<p>L’article <a rel="nofollow" href="https://prowebx.fr/la-creation-de-site-web-avec-wordpress/">La création de site web avec wordpress</a> est apparu en premier sur <a rel="nofollow" href="https://prowebx.fr">ProWebx</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://prowebx.fr/la-creation-de-site-web-avec-wordpress/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>
