@@ -1,0 +1,874 @@
+[amine@vps749976 ~]$ cat ~/.bash_history
+pwd
+sudo ls -l /root
+ls -l /root
+cd /etc/yum.repos.d/
+ls
+vi CentOS-Base.repo
+yum install docker
+exit
+httpd -v
+exit
+pwd
+git clone https://github.com/shmerskawven07/docker-compose-wordpress.git
+locate git
+yum install git
+sudo yum install git
+git clone https://github.com/shmerskawven07/docker-compose-wordpress.git
+ls
+pwd
+cd docker-compose-wordpress/
+ls
+git checkout -b develop
+git status
+git checkout -b origin/develop
+git checkout -b develop
+git status
+exit
+ls
+cd docker-compose-wordpress/
+git status
+ls
+git checkout -b develop
+git checkout develop
+ls
+git update
+git pull
+ls
+git checkout origin/develop
+ls
+git pull
+git fetch
+git branch --list
+git pull origin develop
+git pull origin master
+git status
+ls
+git checkout develop
+git pull origin develop
+git pull origin/develop
+git status
+ls
+cd ..
+ls
+rm -rf docker-compose-wordpress/
+ls
+git clone https://github.com/shmerskawven07/docker-compose-wordpress.git
+ls
+cd docker-compose-wordpress/
+ls
+git status
+git branch -a
+
+git branch -a
+git pull
+git branch -a
+git checkout develop
+git status
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+docker -version
+docker -v
+sudo docker-compose -f docker-compose-prod.yaml up -d
+su - 
+su -
+ls
+cd docker-compose-wordpress/
+ls
+git status
+ls
+vi docker-compose-prod.yaml 
+git status
+git fetch -all
+git fetch --all
+git status
+git reset --hard develop
+git status
+ls
+git pull
+git checkout origin/develop
+ls
+git pull
+git status
+git pull origin develop
+git status
+ls
+cd..
+ls
+cd ..
+ls
+cd docker-compose-wordpress/
+ls
+ls -all
+git pull origin origin/develop
+git status
+cd ..
+ls
+rm -rf docker-compose-wordpress/
+ls
+sudo rm -rf docker-compose-wordpress/
+ls
+git clone -b orign/develop https://github.com/shmerskawven07/docker-compose-wordpress.git
+git clone https://github.com/shmerskawven07/docker-compose-wordpress.git
+git branch -a
+git branch -r
+ls
+cd docker-compose-wordpress/
+git branch -a
+git checkout origin/origin/develop
+ls
+vi docker-compose-prod.yaml 
+vi docker-compose-nginx.yaml
+vi docker-compose-prod.yaml 
+sudo docker-compose -f docker-compose-prod.yaml up -d
+docker -version
+docker-compose -version
+docker-compose -f docker-compose-prod.yaml up -d
+git pull
+ls
+docker-compose -f docker-compose-database.yaml up -d
+docker ps
+sudo docker ps
+sudo docker-compose -f docker-compose-database.yaml up -d
+su -
+docker ps
+exit
+[amine@vps749976 ~]$ 
+------------------------------------------------------------------------------------------------------
+[root@vps749976 ~]# cat ~/.bash_history
+pwd
+locate 
+yum -y update
+whoiam
+whoami
+lsb_release -d
+cat /etc/centos-release
+yum -y install mlocate
+updatedb
+adduser amine
+usermod -aG sudo amine
+sudo visudo
+usermod -aG wheel amine
+passwd amine
+su - amine
+yum install docker
+docker --version
+docker info
+sudo yum remove docker                   docker-common                   docker-selinux                   docker-engine
+yum install -y yum-utils   device-mapper-persistent-data   lvm2
+yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce
+docker -v
+sudo systemctl start docker
+docker info
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose -v
+df -k
+exit
+ls
+pwd
+cd ..
+ls
+cd home/
+ls
+exit
+ls
+cd /home/amine/
+ls
+cd docker-compose-wordpress/
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+docker ps
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+ls
+git pull
+ls
+vi wordpress_files/wp-config.php 
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+vi docker-compose-prod.yaml 
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+vi docker-compose-prod.yaml 
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+exit
+ls
+pwd
+cd 
+cd ../home/amine/docker-compose-wordpress/
+ls
+docker-compose -f docker-compose-database.yaml up -d
+ls
+cd bin
+ls
+vi restore-db-unix.sh 
+./restore-db-unix.sh 
+docker-compose -f docker-compose-database.yaml down
+cd ..
+docker-compose -f docker-compose-database.yaml down
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+vi docker-compose-prod.yaml 
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+vi docker-compose-prod.yaml 
+ls
+vi redirect.conf 
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+ls
+vi redirect.conf 
+ls -all
+ls
+vi docker-compose-prod.yaml 
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+ls
+mv mysql_data mysql_data_old
+ls
+docker-compose -f docker-compose-database.yaml up -d
+ls
+cd bin
+ls
+./restore-db-unix.sh
+docker-compose -f docker-compose-database.yaml down
+cd ..
+ls
+docker-compose -f docker-compose-database.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+ls
+vi redirect.conf
+git status
+ls
+docker ps
+ls
+vi docker-compose-prod.yaml 
+vi redirect.conf
+docker-compose -f docker-compose-database.yaml down
+ls
+docker-compose -f docker-compose-prod.yaml down
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml downls
+ls
+rm -rf mysql_data
+docker-compose -f docker-compose-prod.yaml up -d
+cd bin
+./restore-db-unix.sh 
+cd ..
+docker-compose -f docker-compose-prod.yaml down
+vi docker-compose-prod.yaml 
+ls
+vi redirect.conf 
+docker-compose -f docker-compose-prod.yaml up -d
+vi docker-compose-prod.yaml 
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+ls
+vi docker-compose-prod.yaml 
+ls
+rm redirect.conf 
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+ls
+cd /home/amine/
+ls
+cd docker-compose-wordpress/
+ls
+docker ps 
+ls
+cd  logs/
+ls
+cd nginx_webserver/
+ls
+ll
+tail -f access.log 
+ls
+ll
+cd ..
+ls
+cd ..
+ls
+docker-compose -f docker-compose-prod.yaml down
+ls
+ll
+ls nginx
+ls conf_tmp_to_link/
+vi docker-compose-prod.yaml 
+ls
+ll
+rm -rf mysql_data
+mkdir mysql_data
+ll
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+docker ŝ
+docker ps
+netstat -nltp
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+ls
+git status
+ls
+ll
+ls logs/nginx_webserver/
+ls
+ll
+vi nginx/wordpress.webserver.conf 
+ll
+docker ps
+ls
+cd ..
+ls
+grep "dev.prowebx.fr" docker-compose-wordpress/
+grep -r "dev.prowebx.fr" docker-compose-wordpress/
+grep -rlw "dev.prowebx.fr" docker-compose-wordpress/
+vi docker-compose-wordpress/wordpress_files/wp-config.php
+ls
+cd docker-compose-wordpress/
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+cd ..
+ls
+grep -rlw "dev.prowebx.fr" docker-compose-wordpress/
+docker-compose -f docker-compose-prod.yaml down
+ls
+cd docker-compose-wordpress/
+ls
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-database.yaml up -d
+ls
+cd bin/
+ls
+vi restore-db-unix.sh 
+./restore-db-unix.sh 
+cd ..
+docker-compose -f docker-compose-database.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+cd ..
+ls
+grep -rlw "dev.prowebx.fr" docker-compose-wordpress/
+vi docker-compose-wordpress/bin/dump.sql
+docker-compose -f docker-compose-database.yaml down
+ls
+cd docker-compose-wordpress/
+docker-compose -f docker-compose-prod.yaml down
+ls
+ll
+docker ps
+rm -rf mysql_data
+mkdir mysql_data
+cd bin
+ls
+vi dump.sql 
+cd ..
+ls
+cd ..
+ls
+grep -rlw "dev.prowebx.fr" docker-compose-wordpress/
+ls
+cd docker-compose-wordpress/
+ls
+docker-compose -f docker-compose-database.yaml up -d
+ls
+cd bin/
+ls
+./restore-db-unix.sh 
+docker ps
+./restore-db-unix.sh 
+docker-compose -f docker-compose-database.yaml down
+cd ..
+docker-compose -f docker-compose-database.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+docker ps
+ls
+rm -rf 
+rm -rf mysql_data
+docker-compose -f docker-compose-prod.yaml up -d
+ls
+cd bin
+ls
+./restore-db-unix.sh 
+cd ..
+ls
+ll
+docker-compose -f docker-compose-prod.yaml down
+ls
+chmod 777 wordpress_files/
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+ll
+chown root:root wordpress_files/
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+ls
+cd wordpress_files/
+ls
+ll
+cd wp-admin/
+ls
+ll
+cd ..
+ls
+ll
+cd  wp-content/
+ls
+mv plugins/ plugins_old/
+ll
+cd ../..
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+ls
+cd wordpress_files/
+ls
+vi wp-config.php
+ls
+ll
+cd 
+ls
+cd /home/
+ls
+cd amine/
+ls
+cd docker-compose-wordpress/
+ls
+ll
+docke ps
+docker ps
+docker-compose -f docker-compose-prod.yaml down
+ls
+cd wordpress_files/
+ls
+cd wp-con
+cd wp-content/
+ls
+mv plugins_old/ plugins/
+ll
+cd ../..
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+ls
+cd wordpress_files/
+ls
+cd wp-content/
+ls
+cd themes/
+ls
+cd ..
+ls
+docker-compose -f docker-compose-prod.yaml down
+passwd
+ls
+pwd
+docker ps
+git clone https://github.com/shmerskawven07/docker-compose-wordpress.git
+ls
+cd docker-compose-wordpress/
+ls
+cd ..
+git branch
+cd docker-compose-wordpress/
+git branch
+git branch -a
+git checkout -b develop /origin/develop
+git checkout -b develop origin/develop
+git branch
+git branch -a
+git checkout -b developement origin/origin/develop
+git branch
+git branch -a
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+ls
+tail -100f logs/nginx_webserver/error.log 
+docker-compose -f docker-compose-prod.yaml down
+ls
+rm -rf mysql_data
+mkdir mysql_data
+docker-compose -f docker-compose-database.yaml up -d
+cd bin/
+ls
+./restore-db-unix.sh
+docker-compose -f docker-compose-database.yaml down
+cd ..
+docker-compose -f docker-compose-database.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+ls
+rm -rf docker-compose-wordpress/
+docker ps
+cd /home/amine/
+ls
+rm -rf docker-compose-wordpress/
+ls
+git clone https://github.com/shmerskawven07/docker-compose-wordpress.git
+ls
+cd docker-compose-wordpress/
+ls
+git branch
+git branch -a
+git checkout -b developement origin/developement
+git branch -a
+ls
+vi docker-compose-nginx.yaml 
+docker-compose -f docker-compose-database.yaml up -d
+docker-compose -f docker-compose-database.yaml down
+ls
+rm -rf mysql_data
+mkdir mysql_data
+docker-compose -f docker-compose-database.yaml up -d
+cd bin/
+ls
+./restore-db-unix.sh
+cd ..
+docker-compose -f docker-compose-database.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+ls
+cd logs/
+ls
+cd nginx_webserver/
+ls
+rm error.log 
+ls
+pwd
+cd ../..
+ls
+ls mysql_data
+docker-compose -f docker-compose-prod.yaml up -d
+git status
+ls
+ls -all
+vi .gitignore 
+git status
+vi .gitignore 
+git rm -r --cached .
+git add .
+git status
+git commit -m "fixed untracked files"
+git status
+ls
+ifconfig
+exit
+ls
+cd /home/amine/docker-compose-wordpress/
+docker-compose -f docker-compose-prod.yaml down
+cd /home/amine/
+ls
+cd docker-compose-wordpress/
+ls
+docker-compose -f docker-compose-prod.yaml up -d
+ls
+cd wordpress_files/
+ls
+vi wp-config.php 
+chmod 777 wp-content/plugins/
+cd ..
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up
+docker-compose -f docker-compose-prod.yaml down
+chmod 775 wordpress_files/wp-content/plugins/
+ls
+ll
+ls
+chown -R apache:apache wordpress_files/
+chmod g+w wordpress_files/
+docker-compose -f docker-compose-prod.yaml up -d
+cd wordpress_files/
+ll
+cd wp-content/
+ls
+cd plugins/
+ls
+ll
+cd ..
+pwd
+cd ..
+ls
+ll
+chmod -R 775 wp-content/
+cd ..
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+chown username:www-data wordpress_files/ -R 
+chown amine:www-data wordpress_files/ -R 
+chown www-data -R wordpress_files/
+docker ps
+docker exec -it wordpress-site bash
+ls
+cd bin
+ls
+rm dump.sql
+./export-db-unix.sh 
+ls
+cd ..
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker ps
+docker-compose -f docker-compose-prod.yaml down
+ls
+cd /home/amine/docker-compose-wordpress/
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+docker ps
+docker exec -it wordpress-site bash
+docker ps -a
+pwd
+ls
+cd /home/amine/
+pwd
+ls
+ls -all
+ls
+vi test.txt
+ls
+vi test.txt 
+rm test.txt 
+ls
+cd /home/amine/docker-compose-wordpress/
+ls
+git status
+cd /home/amine/
+ls
+cd docker-compose-wordpress/
+ls
+git status
+ls
+cd bin
+ls
+mv dump.sql dump.sql.old
+ls
+./export-db-unix.sh 
+ls
+cd ..
+ls
+git add .
+git commit -m "cleaning and configuring yoast"
+git status
+git push origin developement
+ls
+vi .gitignore
+git status
+git add .
+git commit -m "update gitignore"
+git push origin developement
+ls
+git status
+git add *
+git status
+vi .gitignore 
+git add .
+git commit -m "update gitignore"
+git push origin developement
+git status
+git add -A
+git commit -m "cleaning themes and extentions"
+git push origin developement
+git status
+exit
+cd /home/amine/
+ls
+cd docker-compose-wordpress/
+ls
+git status
+cd certs/
+ls
+ls -all
+git status
+cd ..
+git pull
+ls
+ll
+ls
+ll
+cd config/
+ls
+vi php.conf.ini/
+cd ..
+ls
+git status
+vi docker-compose-prod.yaml 
+docker-compose -f docker-compose-prod.yaml down
+vi docker-compose-prod.yaml 
+ls
+mv config/ wordpress_config/
+ls
+mv conf_tmp_to_link/php.conf.ini wordpress_config/
+ls -all wordpress_config/
+mv conf_tmp_to_link/php.conf.ini wordpress_config/
+ls
+cd wordpress_config/
+ls
+rm -rf php.conf.ini/
+cd ..
+mv conf_tmp_to_link/php.conf.ini wordpress_config/
+ls -all wordpress_config/
+chmod 775 wordpress_config/php.conf.ini 
+ls -all wordpress_config/
+docker-compose -f docker-compose-prod.yaml up -d
+ls
+rm backup.sql.txt 
+docker-compose -f docker-compose-prod.yaml down
+vi docker-compose-prod.yaml 
+ls
+ls -all nginx
+vi docker-compose-prod.yaml 
+mv nginx nginx_config
+ls
+ls -all nginx_config/
+mv nginx.tmpl nginx_config/
+ll
+vi docker-compose-prod.yaml 
+ls nginx_config/
+vi docker-compose-prod.yaml 
+ls conf_tmp_to_link/
+vi docker-compose-prod.yaml 
+ls
+ll
+ls -all nginx_config/
+vi docker-compose-prod.yaml 
+mv default.vhost.conf nginx_config/
+ll
+rm dcc.text 
+ls conf_tmp_to_link/
+rm -rf conf_tmp_to_link/
+ll
+vi docker-compose-prod.yaml 
+docker-compose -f docker-compose-prod.yaml up -d
+git add all
+git add --all
+git commit -m "assemble config files"
+git push origin developement
+git status
+ls
+ls -all
+rm docker-compose-nginx.yaml 
+ls
+cd /home/amine/
+ls
+cd docker-compose-wordpress/
+ls
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+git status
+ls
+cd bin
+ls
+mv dump.sql dump.sql.oldd
+ls
+ll
+./export-db-unix.sh 
+ls
+cd ..
+git status
+docker ps
+cd /home/amine/docker-compose-wordpress/
+ls
+git status
+ls
+cd bin
+ls
+./export-db-unix.sh 
+cd ..
+ls
+git add --all
+git commit -m "add mention legal and fix button links"
+git push
+cd /home/amine/
+ls
+cd docker-compose-wordpress/
+ls
+cd logs
+ls
+cd nginx_webserver/
+ls
+ls -all
+tail -f access.log 
+ls
+ls -all
+tail -f error.log 
+cd ../..
+ls
+docker-compose -f docker-compose-prod.yaml down
+docker-compose -f docker-compose-prod.yaml up -d
+ls
+cd /home/amine/
+ls
+cd docker-compose-wordpress/
+ls
+cd bin/
+ls
+rm dump.sql
+./export-db-unix.sh 
+ls
+cd ..
+ls
+git status
+git add --all
+git commit -m "sendgrid mail setup"
+git push
+cd /home/amine/
+ls
+cd docker-compose-wordpress/
+ls
+git status
+git add --all
+git commit -m "add logo"
+git push
+ls
+cd bin
+ls
+rm dump.sql.oldd
+ls
+mv dump.sql.old dump.sql.oldd
+rm dump.sql.old
+mv dump.sql dump.sql.old
+ls
+./export-db-unix.sh 
+ls
+cd ..
+ls
+git status
+git add --all
+git commit -m "backup database"
+git push
+exit
+ls
+cd /home/
+ls
+cd amine/
+ls
+cd docker-compose-wordpress/
+ls
+ll
+locate volume-reverse-proxy
+ls /var/lib/docker/volumes/docker-compose-wordpress_volume-reverse-proxy
+ls /var/lib/docker/volumes/docker-compose-wordpress_volume-reverse-proxy/_data/
+vi /var/lib/docker/volumes/docker-compose-wordpress_volume-reverse-proxy/_data/default.conf 
+vi /var/lib/docker/volumes/docker-compose-wordpress_volume-reverse-proxy-html/
+vi /var/lib/docker/volumes/docker-compose-wordpress_volume-reverse-proxy-vhost/_data/prowebx.fr_location 
+vi /var/lib/docker/volumes/docker-compose-wordpress_volume-reverse-proxy-vhost/_data/default
+vi /var/lib/docker/volumes/docker-compose-wordpress_volume-reverse-proxy-vhost/_data/www.prowebx.fr_location
+ls
+vi /var/lib/docker/volumes/docker-compose-wordpress_volume-reverse-proxy/_data/default.conf 
+ls
+pwd
+cd /home/amine/docker-compose-wordpress/ps -aex 
+ps -aex
+docker ps
+exit
